@@ -10,12 +10,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rigidBody;
     private Vector3 movement, clampedVelocity;
     private float speed = 10;
-    private bool canMove = true;
+    private bool canMove;
 
     void Start()
     {
         instance.inputControls.Actions.Interact.performed += InteractionEvent;
         rigidBody = GetComponent<Rigidbody>();
+        canMove = true;
     }
 
     void FixedUpdate()
