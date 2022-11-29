@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XInput;
 
-public class CharacterMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public delegate void Interaction();
+    public static Interaction interaction;
+
     private Rigidbody rigidBody;
     private InputControls inputController;
     private InputAction vertical, horizontal;
     private Vector3 movement, clampedVelocity;
-    private float speed = 100;
+    private float speed = 10;
     private bool canMove = true;
 
     void Start()
@@ -20,6 +22,7 @@ public class CharacterMovement : MonoBehaviour
         inputController.Enable();
         vertical = inputController.Actions.Vertical;
         horizontal = inputController.Actions.Horizontal;
+        inputController.Actions.Interact.performed += InteractionEvent;
         rigidBody = GetComponent<Rigidbody>();
     }
 
@@ -27,8 +30,6 @@ public class CharacterMovement : MonoBehaviour
     {
         if (canMove)
         {
-            print(horizontal.ReadValue<float>());
-            print(vertical.ReadValue<float>());
             movement = new Vector3(horizontal.ReadValue<float>(), 0, vertical.ReadValue<float>()).normalized;
             rigidBody.velocity += movement;
 
@@ -44,7 +45,17 @@ public class CharacterMovement : MonoBehaviour
             Vector3 lookDirection = rigidBody.velocity;
             lookDirection.y = 0;
             transform.rotation = movement == Vector3.zero ? transform.rotation : Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookDirection), Time.fixedDeltaTime * 5f);
-            print(rigidBody.velocity);
         }
+    }
+
+    private void InteractionEvent(InputAction.CallbackContext context)
+    {
+        interaction?.Invoke();
+    }
+
+    private void OnDisable()
+    {
+        inputController.Actions.Interact.performed -= InteractionEvent;
+        inputController.Disable();
     }
 }
