@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static InputManager;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,19 +8,13 @@ public class PlayerController : MonoBehaviour
     public static Interaction interaction;
 
     private Rigidbody rigidBody;
-    private InputControls inputController;
-    private InputAction vertical, horizontal;
     private Vector3 movement, clampedVelocity;
     private float speed = 10;
     private bool canMove = true;
 
     void Start()
     {
-        inputController = new InputControls();
-        inputController.Enable();
-        vertical = inputController.Actions.Vertical;
-        horizontal = inputController.Actions.Horizontal;
-        inputController.Actions.Interact.performed += InteractionEvent;
+        instance.inputControls.Actions.Interact.performed += InteractionEvent;
         rigidBody = GetComponent<Rigidbody>();
     }
 
@@ -30,7 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canMove)
         {
-            movement = new Vector3(horizontal.ReadValue<float>(), 0, vertical.ReadValue<float>()).normalized;
+            movement = new Vector3(instance.horizontal.ReadValue<float>(), 0, instance.vertical.ReadValue<float>()).normalized;
             rigidBody.velocity += movement;
 
             if (rigidBody.velocity.magnitude > 10)
@@ -55,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
-        inputController.Actions.Interact.performed -= InteractionEvent;
-        inputController.Disable();
+        instance.inputControls.Actions.Interact.performed -= InteractionEvent;
+        instance.inputControls.Disable();
     }
 }
