@@ -11,17 +11,18 @@ public class Dialogue : MonoBehaviour
     public string title;
     public string description;
 
-    private NamePlate namePlate;
+    [SerializeField] NamePlate namePlate;
 
     private void Start()
     {
-        namePlate = GetComponent<NamePlate>();
+        namePlate = GetComponentInChildren<NamePlate>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            namePlate.ShowNamePlate();
             PlayerController.interaction += Talk;
         }
     }
@@ -30,6 +31,7 @@ public class Dialogue : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            namePlate.HideNamePlate();
             PlayerController.interaction -= Talk;
             dialogueBox.gameObject.SetActive(false);
         }

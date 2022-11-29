@@ -6,25 +6,30 @@ using DG.Tweening;
 
 public class NamePlate : MonoBehaviour
 {
-    [SerializeField] TMP_Text namePlateText;
+    private TMP_Text namePlateText;
     private Dialogue dialogue;
 
     private void Start()
     {
-        namePlateText = GetComponentInChildren<TMP_Text>();
-        dialogue = GetComponent<Dialogue>();
+        namePlateText = GetComponent<TMP_Text>();
+        dialogue = GetComponentInParent<Dialogue>();
 
         namePlateText.text = dialogue.name;
+
+        transform.rotation = Camera.main.transform.rotation;
+        transform.localScale = Vector3.zero;
     }
 
     public void ShowNamePlate()
     {
         namePlateText.gameObject.SetActive(true);
+
+        transform.DOScale(0.75f, 0.5f).SetEase(Ease.OutBounce);
+        //transform.DOScale(0.75f, 0.3f).OnComplete(()=> transform.DOPunchScale(new Vector3(0.1f,0.1f,0.1f), 0.1f));
     }
 
     public void HideNamePlate()
     {
-        namePlateText.gameObject.SetActive(false);
+        transform.DOScale(0f, 0.3f).OnComplete(() => namePlateText.gameObject.SetActive(false));
     }
-
 }
