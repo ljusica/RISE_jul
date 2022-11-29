@@ -5,16 +5,11 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
-    private GameObject dialogueBox;
+    public GameObject dialogueBox;
 
-    private TMP_Text nameText;
-    private TMP_Text titleText;
-    private TMP_Text descriptionText;
-
-    private void Start()
-    {
-        
-    }
+    public string name;
+    public string title;
+    public string description;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,11 +24,36 @@ public class Dialogue : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerController.interaction -= Talk;
+            dialogueBox.gameObject.SetActive(false);
         }
     }
 
     private void Talk()
     {
-        Debug.Log("Talk!!");
+        for (int i = 0; i < dialogueBox.transform.childCount; i++)
+        {
+            switch (i)
+            {
+                case 1:
+                    dialogueBox.transform.GetChild(i).GetComponent<TMP_Text>().text = name;
+                    break;
+
+                case 2:
+                    dialogueBox.transform.GetChild(i).GetComponent<TMP_Text>().text = title;
+                    break;
+
+                case 3:
+                    dialogueBox.transform.GetChild(i).GetComponent<TMP_Text>().text = description;
+                    break;
+
+                default:
+                    Debug.Log("Whoopsiedoodle");
+                    break;
+            }
+
+        }
+
+        dialogueBox.gameObject.SetActive(true);
+
     }
 }
