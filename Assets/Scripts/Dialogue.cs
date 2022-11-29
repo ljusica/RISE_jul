@@ -11,6 +11,13 @@ public class Dialogue : MonoBehaviour
     public string title;
     public string description;
 
+    private NamePlate namePlate;
+
+    private void Start()
+    {
+        namePlate = GetComponent<NamePlate>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
