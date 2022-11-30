@@ -5,7 +5,7 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
-    public GameObject dialogueBox;
+    [SerializeField] GameObject dialogueBox;
 
     public string name;
     public string title;
