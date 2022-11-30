@@ -13,6 +13,6 @@ public class RobotCamera : MonoBehaviour
 
     void Update()
     {
-        
+        transform.LookAt(objectToFollow.transform);
     }
 }
