@@ -6,6 +6,8 @@ using static InputManager;
 
 public class RobotController : MonoBehaviour
 {
+    public bool isGrounded;
+    
     private Rigidbody rigidBody;
     private Vector3 inputs, direction, lookDirection, savedDirection;
     private bool newDirection = false;
@@ -21,10 +23,18 @@ public class RobotController : MonoBehaviour
 
     void FixedUpdate()
     {
-        inputs = new Vector3(instance.horizontal.ReadValue<float>(), 0, instance.vertical.ReadValue<float>());
+        if (isGrounded)
+        {
+            inputs = new Vector3(instance.horizontal.ReadValue<float>(), 0, instance.vertical.ReadValue<float>());
+        }
+        else
+        {
+            inputs = Vector3.zero;
+        }
+
         direction = Camera.main.transform.forward * inputs.z + Camera.main.transform.right * inputs.x;
 
-        if(inputs != Vector3.zero && !newDirection)
+        if (inputs != Vector3.zero && !newDirection)
         {
             newDirection = true;
             savedDirection = direction;
@@ -33,7 +43,7 @@ public class RobotController : MonoBehaviour
         if (inputs != Vector3.zero)
             direction = savedDirection;
 
-        rigidBody.velocity += new Vector3(direction.x, 0, direction.z) * 0.35f;
+        rigidBody.velocity += new Vector3(direction.x, 0, direction.z) * 0.2f;
         lookDirection = rigidBody.velocity;
 
         transform.rotation = inputs == Vector3.zero ? transform.rotation : Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookDirection), Time.fixedDeltaTime * 5f);
@@ -41,7 +51,7 @@ public class RobotController : MonoBehaviour
 
     private void SaveDirectionInput(InputAction.CallbackContext callbackContext)
     {
-        if(instance.vertical.ReadValue<float>() == 0 && instance.horizontal.ReadValue<float>() == 0)
+        if (instance.vertical.ReadValue<float>() == 0 && instance.horizontal.ReadValue<float>() == 0)
         {
             newDirection = false;
         }
