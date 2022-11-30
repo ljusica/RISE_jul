@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class RobotCamera : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private GameObject objectToFollow;
+
     void Start()
     {
-        
+        objectToFollow = GameObject.FindGameObjectWithTag("Robot");
     }
 
-    // Update is called once per frame
     void Update()
     {
         
