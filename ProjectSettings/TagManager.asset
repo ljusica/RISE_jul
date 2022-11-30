@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Robot
   - Chair
+  - Winzone
+  - Playzone
   layers:
   - Default
   - TransparentFX
