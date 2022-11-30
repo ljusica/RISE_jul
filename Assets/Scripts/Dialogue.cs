@@ -61,7 +61,7 @@ public class Dialogue : MonoBehaviour
             }
 
         }
-
+        Objectives.Instance.CheckObjective(name);
         dialogueBox.gameObject.SetActive(true);
 
     }
