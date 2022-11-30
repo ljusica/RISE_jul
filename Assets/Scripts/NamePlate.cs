@@ -15,7 +15,6 @@ public class NamePlate : MonoBehaviour
         dialogue = GetComponentInParent<Dialogue>();
 
         string[] firstName = dialogue.name.Split(' ');
-
         namePlateText.text = firstName[0];
 
         transform.rotation = Camera.main.transform.rotation;
