@@ -53,6 +53,15 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Restart"",
+                    ""type"": ""Button"",
+                    ""id"": ""3b0d86ff-fab2-4d1e-9aba-f866346decca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -198,6 +207,17 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7603443b-c047-4479-8da7-c17eaa100ffc"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Restart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -209,6 +229,7 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
         m_Actions_Vertical = m_Actions.FindAction("Vertical", throwIfNotFound: true);
         m_Actions_Horizontal = m_Actions.FindAction("Horizontal", throwIfNotFound: true);
         m_Actions_Interact = m_Actions.FindAction("Interact", throwIfNotFound: true);
+        m_Actions_Restart = m_Actions.FindAction("Restart", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -271,6 +292,7 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Actions_Vertical;
     private readonly InputAction m_Actions_Horizontal;
     private readonly InputAction m_Actions_Interact;
+    private readonly InputAction m_Actions_Restart;
     public struct ActionsActions
     {
         private @InputControls m_Wrapper;
@@ -278,6 +300,7 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
         public InputAction @Vertical => m_Wrapper.m_Actions_Vertical;
         public InputAction @Horizontal => m_Wrapper.m_Actions_Horizontal;
         public InputAction @Interact => m_Wrapper.m_Actions_Interact;
+        public InputAction @Restart => m_Wrapper.m_Actions_Restart;
         public InputActionMap Get() { return m_Wrapper.m_Actions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -296,6 +319,9 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
                 @Interact.started -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_ActionsActionsCallbackInterface.OnInteract;
+                @Restart.started -= m_Wrapper.m_ActionsActionsCallbackInterface.OnRestart;
+                @Restart.performed -= m_Wrapper.m_ActionsActionsCallbackInterface.OnRestart;
+                @Restart.canceled -= m_Wrapper.m_ActionsActionsCallbackInterface.OnRestart;
             }
             m_Wrapper.m_ActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -309,6 +335,9 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @Restart.started += instance.OnRestart;
+                @Restart.performed += instance.OnRestart;
+                @Restart.canceled += instance.OnRestart;
             }
         }
     }
@@ -318,5 +347,6 @@ public partial class @InputControls : IInputActionCollection2, IDisposable
         void OnVertical(InputAction.CallbackContext context);
         void OnHorizontal(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnRestart(InputAction.CallbackContext context);
     }
 }

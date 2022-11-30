@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour
 {
@@ -17,8 +18,7 @@ public class InputManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
-            Destroy(instance);
+            Destroy(this);
         }
 
         inputControls = new InputControls();
@@ -26,10 +26,16 @@ public class InputManager : MonoBehaviour
         vertical = inputControls.Actions.Vertical;
         horizontal = inputControls.Actions.Horizontal;
         interact = inputControls.Actions.Interact;
+        inputControls.Actions.Restart.performed += RestartLevel;
     }
 
     private void OnDisable()
     {
         inputControls.Disable();
+    }
+
+    void RestartLevel(InputAction.CallbackContext ctx)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
