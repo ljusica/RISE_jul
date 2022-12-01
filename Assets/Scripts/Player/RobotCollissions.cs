@@ -1,24 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class RobotCollissions : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem[] fireworks;
+    [SerializeField] private GameObject[] fireworks;
     [SerializeField] private float force;
-    
+
+    private ParticleSystem[] fireworkParticles;
+    private AudioSource[] fireworkSounds;
+
     private Rigidbody rb;
     private RobotController robotController;
+    private Vector3 startPos;
 
     private void Start()
     {
+        startPos = transform.position;
         rb = GetComponent<Rigidbody>();
         robotController = GetComponent<RobotController>();
+        fireworkParticles = new ParticleSystem[3];
+        fireworkSounds = new AudioSource[3];
 
         for (int i = 0; i < fireworks.Length; i++)
         {
-            fireworks[i] = fireworks[i].GetComponent<ParticleSystem>();
+            fireworkParticles[i] = fireworks[i].GetComponent<ParticleSystem>();
+            fireworkSounds[i] = fireworks[i].GetComponent<AudioSource>();
         }
     }
 
@@ -42,12 +49,7 @@ public class RobotCollissions : MonoBehaviour
     {
         if(col.CompareTag("Winzone"))
         {
-            for (int i = 0; i < fireworks.Length; i++)
-            {
-                var main = fireworks[i].main;
-                main.simulationSpeed = 5;
-                fireworks[i].Play();
-            }
+            StartCoroutine(nameof(SpawnFireworks));
         }
     }
 
@@ -55,12 +57,31 @@ public class RobotCollissions : MonoBehaviour
     {
         if (col.CompareTag("Respawn"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            transform.position = startPos;
         }
 
         if (col.CompareTag("Playzone"))
         {
             robotController.isGrounded = false;
         }
+    }
+
+    IEnumerator SpawnFireworks()
+    {
+        PlayFireworks(0);
+
+        yield return new WaitForSeconds(0.7f);
+        PlayFireworks(1);
+
+        yield return new WaitForSeconds(1.2f);
+        PlayFireworks(2);
+    }
+
+    private void PlayFireworks(int index)
+    {
+        var main = fireworkParticles[index].main;
+        main.simulationSpeed = 5;
+        fireworkParticles[index].Play();
+        fireworkSounds[index].Play();
     }
 }
