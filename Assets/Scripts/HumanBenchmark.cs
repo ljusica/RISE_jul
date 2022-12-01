@@ -75,7 +75,11 @@ public class HumanBenchmark : MonoBehaviour
                 gameStarted = false;
                 timeGreen *= 1000;
                 Mathf.Round(timeGreen);
-                string[] timeString = timeGreen.ToString().Split(".");
+                string[] timeString = new string[2];
+                if (timeGreen.ToString().Contains("."))
+                    timeString = timeGreen.ToString().Split(".");
+                else if(timeGreen.ToString().Contains(","))
+                    timeString = timeGreen.ToString().Split(",");
                 stateText.text = timeString[0] + " ms";
                 subText.text = "Click to keep going";
                 timeGreen = 0;
