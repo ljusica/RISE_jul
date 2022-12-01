@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class ChairSeatCollide : MonoBehaviour
 {
-    public GameObject chair;
 
-    public async void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("Chair"))
+            collision.gameObject.GetComponent<FallingChair>().CollectChair();
     }
 }

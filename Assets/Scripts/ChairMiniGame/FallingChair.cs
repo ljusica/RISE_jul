@@ -6,6 +6,7 @@ using UnityEngine;
 public class FallingChair : MonoBehaviour
 {
     private Rigidbody rigidBody;
+    private bool isCollected;
 
     void Start()
     {
@@ -14,6 +15,12 @@ public class FallingChair : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidBody.AddForce(0, -4, 0);
+        if(!isCollected) rigidBody.AddForce(0, -4, 0);
+    }
+
+    public void CollectChair()
+    {
+        rigidBody.mass = 0.1f;
+        isCollected = true;
     }
 }
