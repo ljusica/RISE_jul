@@ -10,7 +10,6 @@ public class HumanBenchmark : MonoBehaviour
 {
     [Header("Variables")]
     [SerializeField] bool gameStarted;
-    [SerializeField] bool isGreen;
     [SerializeField] float timeSinceGameStart;
     [SerializeField] float timeGreen;
 
@@ -38,6 +37,10 @@ public class HumanBenchmark : MonoBehaviour
         if (gameStarted)
             timeSinceGameStart += Time.deltaTime;
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Click();
+        }
 
         Game();
     }
@@ -53,7 +56,6 @@ public class HumanBenchmark : MonoBehaviour
                 subText.gameObject.SetActive(true);
                 subText.text = "";
                 image.color = Color.red;
-                isGreen = false;
                 timeSinceGameStart = 0;
                 timeTillGreen = Random.Range(3f, 4.5f);
                 gameStarted = true;
@@ -93,7 +95,6 @@ public class HumanBenchmark : MonoBehaviour
 
         if (timeSinceGameStart < timeTillGreen)
         {
-            isGreen = false;
             image.color = Color.red;
             state = 2;
             stateText.text = "Wait for green";
@@ -101,7 +102,6 @@ public class HumanBenchmark : MonoBehaviour
         else
         {
             timeGreen += Time.deltaTime;
-            isGreen = true;
             image.color = Color.green;
             state = 3;
             stateText.text = "Click!";
