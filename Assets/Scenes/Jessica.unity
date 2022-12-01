@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &17457169
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.8372498
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.496069
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.919922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093348, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459708233021093349, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: npcParent
+      value: 
+      objectReference: {fileID: 385710879}
+    - target: {fileID: 3459708233021093350, guid: 4d7924cee6675874786977a9076d7308, type: 3}
+      propertyPath: m_Name
+      value: ObjectiveHolder
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d7924cee6675874786977a9076d7308, type: 3}
 --- !u!1 &83643594
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +324,10 @@ PrefabInstance:
       value: Researcher & developer
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Gunnar Oledal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I like to play music, especially the saxophone. I'm currently in a band
         called Obsklassen. On my free time I also like skateboarding.
@@ -378,6 +443,132 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &215216932
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385710879}
+    m_Modifications:
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0485802
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.510689
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.111641
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: title
+      value: Unit Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Jessica Dagman
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: description
+      value: I like to play floorball
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_Name
+      value: JessicaDNPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+--- !u!1001 &234693288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1467438406}
+    m_Modifications:
+    - target: {fileID: 3607913827644960907, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_Name
+      value: CARL_CHRISTENSEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132670781858458161, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab739dfb9e6fabb4ab2e5208558221fa, type: 3}
 --- !u!1 &246259944
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +667,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &324088708 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 900563458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &334467522
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385710879}
+    m_Modifications:
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.1620255
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.514626
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: title
+      value: Researcher, designer & developer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Jacob Michelsen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: description
+      value: I like to build models in my free time
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_Name
+      value: JacobNPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+--- !u!4 &334467523 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 334467522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &385710878
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,9 +790,75 @@ Transform:
   - {fileID: 991717257}
   - {fileID: 1516006663}
   - {fileID: 692632126}
+  - {fileID: 872169090}
+  - {fileID: 528263735}
+  - {fileID: 1036879996}
+  - {fileID: 781898791}
+  - {fileID: 2055448417}
+  - {fileID: 334467523}
+  - {fileID: 324088708}
+  - {fileID: 464139899}
+  - {fileID: 2118607292}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &416859553
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1602912748}
+    m_Modifications:
+    - target: {fileID: 3785847137622959561, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_Name
+      value: ERIK_EINEBRANDT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594189787476426611, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d859a62b3f2a9a843a33439fbca10ce5, type: 3}
 --- !u!4 &424777116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
@@ -590,6 +926,10 @@ PrefabInstance:
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: title
       value: Intern
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Jessica Ceder
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
@@ -675,6 +1015,10 @@ PrefabInstance:
       value: Scientist
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: "L\xE1szl\xF3 Sall Vessel\xE9nyi"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I enjoy listening to music. My favourite genre is post rock.
       objectReference: {fileID: 0}
@@ -692,6 +1036,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
   m_PrefabInstance: {fileID: 445165936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &464139899 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 215216932}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &495696950 stripped
 Transform:
@@ -762,6 +1111,10 @@ PrefabInstance:
       value: Researcher
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Niels Stor Swinkels
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: My hobbies include making things, I especially enjoy carpentry
       objectReference: {fileID: 0}
@@ -785,11 +1138,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 385710879}
     m_Modifications:
+    - target: {fileID: 273286956219056157, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 273286956219056157, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 273286956219056157, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 273286956219056157, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalScale.x
@@ -805,15 +1174,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -55.092224
+      value: -17.662327
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 25.510689
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.595024
+      value: -12.097504
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalRotation.w
@@ -821,15 +1190,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -873,10 +1242,72 @@ PrefabInstance:
       objectReference: {fileID: 950921926}
     - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_Name
-      value: KillroyNPC
+      value: KilroyNPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+--- !u!4 &528263735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 1595689275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &601872825
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 528263735}
+    m_Modifications:
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058535060349889653, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872472300262258383, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
+      propertyPath: m_Name
+      value: ASREEN_ROSTAMI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3358c9d483436f148a1c32dcce866826, type: 3}
 --- !u!1001 &676748575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -941,6 +1372,10 @@ PrefabInstance:
       value: Scientist
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Fanny Lindh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I'm interested in art and culture. On my free time I run the studio
         Doma with a couple of friends.
@@ -952,6 +1387,10 @@ PrefabInstance:
     - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_Name
       value: FannyNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616734917980505075, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
@@ -1019,6 +1458,10 @@ PrefabInstance:
       value: Intern
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Viktor Andersson
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I like both creating and playing games. I also listen to quite a bit
         of reggae.
@@ -1037,6 +1480,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
   m_PrefabInstance: {fileID: 692632125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &781898791 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 522828514}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &791371210
 PrefabInstance:
@@ -1102,6 +1550,10 @@ PrefabInstance:
       value: Intern
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Jonathan Dewoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I like to create things, both digital and physical. I'm also interested
         in food and like fermenting stuff.
@@ -1128,6 +1580,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 385710879}
     m_Modifications:
+    - target: {fileID: 98960019513406348, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 273286956219056157, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076117031565946536, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477150554749627064, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280655913716491922, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807547804202473801, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1185,6 +1661,10 @@ PrefabInstance:
       value: Intern
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: "Anna Sandstr\xF6m"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: When I'm not at RISE I work part time at Lyko, which has given me an
         interest in make up and beauty products. I also like to play online games,
@@ -1198,8 +1678,90 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnnaNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 6616734917980505075, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+--- !u!1001 &872169089
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385710879}
+    m_Modifications:
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.3481712
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.510689
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.601364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: title
+      value: Senior Scientist
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Carl Heath
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: description
+      value: I like to cook food and play Elden Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_Name
+      value: CarlHNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616734917980505075, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+--- !u!4 &872169090 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 872169089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &893489199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1264,6 +1826,10 @@ PrefabInstance:
       value: Video producer
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Patrik Eriksson
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: On my free time I like to create my own cameras from scratch.
       objectReference: {fileID: 0}
@@ -1282,6 +1848,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
   m_PrefabInstance: {fileID: 893489199}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &900563458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385710879}
+    m_Modifications:
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.448326
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.320688
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9376373
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: title
+      value: Senior Scientist
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: "Sara Renstr\xF6m"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: description
+      value: I like to dance in my free time
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_Name
+      value: SaraNPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
 --- !u!1 &950921926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4994008785148882609, guid: 18f8b809b83e1fa4c96514f97c99871d, type: 3}
@@ -1351,6 +1986,10 @@ PrefabInstance:
       value: Interactive designer & developer
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Per Ottosson
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: My hobby is wind surfing, I've been doing it since I was about 15 years
         old.
@@ -1370,6 +2009,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
   m_PrefabInstance: {fileID: 991717256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1036879995
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385710879}
+    m_Modifications:
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.7714233
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2938156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: title
+      value: Scientist
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Gustav Backhans
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: description
+      value: I'm interested in photography
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_Name
+      value: GustavNPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+--- !u!4 &1036879996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 1036879995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1051292837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1383,7 +2096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7943550986902505375, guid: 9c6a581372b9311489b9cbfd21f50e0e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7943550986902505375, guid: 9c6a581372b9311489b9cbfd21f50e0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1520,7 +2233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154160412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.038002, y: 0.97, z: -49}
+  m_LocalPosition: {x: -25.038002, y: 0.97, z: -9.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1536,7 +2249,7 @@ Rigidbody:
   m_GameObject: {fileID: 1154160412}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 6
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1620,6 +2333,10 @@ PrefabInstance:
       value: Scientific engineer
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: "Linus \xD6sterberg Nilsson"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I like playing all sorts of games.
       objectReference: {fileID: 0}
@@ -1664,14 +2381,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241389112}
-  m_LocalRotation: {x: 0.51632404, y: 0, z: 0, w: 0.85639334}
-  m_LocalPosition: {x: -21, y: 39, z: -56}
+  m_LocalRotation: {x: -0, y: 0.8492806, z: -0.5279418, w: 0}
+  m_LocalPosition: {x: -21, y: 39, z: -6.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 62.172, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 63.733, y: 180, z: 0}
 --- !u!114 &1241389114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,6 +2473,189 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1001 &1353857814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 495696950}
+    m_Modifications:
+    - target: {fileID: 2538883122032127722, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_Name
+      value: FANNY_LINDH
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913895015174763600, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0f58c09c3a7aab4287ac3d0d93c3269, type: 3}
+--- !u!1001 &1360375645
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 872169090}
+    m_Modifications:
+    - target: {fileID: 7123157773709366028, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_Name
+      value: CARL_HEATH
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606961223177996726, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c1613a557450bf42ae24357a577b52b, type: 3}
+--- !u!1001 &1380154122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385710879}
+    m_Modifications:
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6476669
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.12069
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.1163826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: title
+      value: Intern
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Parisa Nickbon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: description
+      value: I like gaming and watching tv series
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_Name
+      value: ParisaNPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
 --- !u!1001 &1396098923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1818,6 +2718,10 @@ PrefabInstance:
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: title
       value: Employee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Martin Johansson
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
@@ -1907,6 +2811,10 @@ PrefabInstance:
       value: Researcher, designer & developer
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Erik Einebrant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: On my free time I like to make games
       objectReference: {fileID: 0}
@@ -1917,6 +2825,10 @@ PrefabInstance:
     - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_Name
       value: ErikNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616734917980505075, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
@@ -1984,6 +2896,10 @@ PrefabInstance:
       value: Intern
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Rasmus Nilsson
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I have a couple of hobbies. Mostly I enjoy painting, climbing and creating
         games.
@@ -2003,6 +2919,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
   m_PrefabInstance: {fileID: 1516006662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1595689275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385710879}
+    m_Modifications:
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8991356
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.490688
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.222479
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: title
+      value: Senior Researcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Asreen Rostami
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: description
+      value: On my free time I like to read books, explore new restaurants and food,
+        work out and watch movies
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_Name
+      value: AsreenNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616734917980505075, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
 --- !u!4 &1602912748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
@@ -2082,6 +3072,10 @@ PrefabInstance:
       value: Intern
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Gradi Wamudibu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I like to play digital games, but in my free time I also enjoy playing
         basketball.
@@ -2096,10 +3090,141 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+--- !u!1001 &1948090179
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 424777116}
+    m_Modifications:
+    - target: {fileID: 3687685620336762517, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_Name
+      value: "ANNA_SANDSTR\xD6M"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064105193322398767, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f0490e45bfd88046adbd8648d785c70, type: 3}
 --- !u!224 &2043279112 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4994008785148882622, guid: 18f8b809b83e1fa4c96514f97c99871d, type: 3}
   m_PrefabInstance: {fileID: 4994008784179517878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2055448416
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 385710879}
+    m_Modifications:
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.211473
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.510689
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.9835205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: title
+      value: Designer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: "Hanna Norden\xF6"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: description
+      value: My hobbies include going skiing
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_Name
+      value: HannaNPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+--- !u!4 &2055448417 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 2055448416}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2103379606
 GameObject:
@@ -2216,6 +3341,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!4 &2118607292 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6110410550418871233, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+  m_PrefabInstance: {fileID: 1380154122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4994008784179517878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2421,6 +3551,10 @@ PrefabInstance:
       value: Intern
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: riseName
+      value: Carl Christensen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
       value: I like to both make and play games, preferably while listening to SKA.
         I'm also interested in Japanese culture and like everything from anime and
@@ -2433,6 +3567,10 @@ PrefabInstance:
     - target: {fileID: 6110410550418871239, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: m_Name
       value: CarlNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616734917980505075, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
