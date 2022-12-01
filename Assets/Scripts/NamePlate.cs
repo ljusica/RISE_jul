@@ -26,7 +26,6 @@ public class NamePlate : MonoBehaviour
         namePlateText.gameObject.SetActive(true);
 
         transform.DOScale(0.75f, 0.5f).SetEase(Ease.OutBounce);
-        //transform.DOScale(0.75f, 0.3f).OnComplete(()=> transform.DOPunchScale(new Vector3(0.1f,0.1f,0.1f), 0.1f));
     }
 
     public void HideNamePlate()
