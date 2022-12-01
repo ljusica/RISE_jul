@@ -7,7 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     [SerializeField] GameObject dialogueBox;
 
-    public string name;
+    public string riseName;
     public string title;
     public string description;
 
@@ -44,7 +44,7 @@ public class Dialogue : MonoBehaviour
             switch (i)
             {
                 case 1:
-                    dialogueBox.transform.GetChild(i).GetComponent<TMP_Text>().text = name;
+                    dialogueBox.transform.GetChild(i).GetComponent<TMP_Text>().text = riseName;
                     break;
 
                 case 2:
@@ -61,7 +61,7 @@ public class Dialogue : MonoBehaviour
             }
 
         }
-        Objectives.Instance.CheckObjective(name);
+        Objectives.Instance.CheckObjective(riseName);
         dialogueBox.gameObject.SetActive(true);
 
     }
