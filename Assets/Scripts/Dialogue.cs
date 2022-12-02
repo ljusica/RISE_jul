@@ -13,8 +13,11 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField] NamePlate namePlate;
 
+    private AudioSource chatter;
+
     private void Start()
     {
+        chatter = GetComponent<AudioSource>();
         namePlate = GetComponentInChildren<NamePlate>();
     }
 
@@ -39,6 +42,8 @@ public class Dialogue : MonoBehaviour
 
     private void Talk()
     {
+        chatter.Play();
+
         for (int i = 0; i < dialogueBox.transform.childCount; i++)
         {
             switch (i)
