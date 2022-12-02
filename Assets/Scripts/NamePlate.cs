@@ -17,8 +17,12 @@ public class NamePlate : MonoBehaviour
         string[] firstName = dialogue.riseName.Split(' ');
         namePlateText.text = firstName[0];
 
-        transform.rotation = Camera.main.transform.rotation;
         transform.localScale = Vector3.zero;
+    }
+
+    private void Update()
+    {
+        transform.rotation = Camera.main.transform.rotation;
     }
 
     public void ShowNamePlate()
