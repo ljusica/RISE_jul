@@ -61,7 +61,6 @@ public class Dialogue : MonoBehaviour
                     break;
 
                 default:
-                    Debug.Log("Whoopsiedoodle");
                     break;
             }
 
