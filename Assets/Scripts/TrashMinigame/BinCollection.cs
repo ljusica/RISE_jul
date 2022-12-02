@@ -15,7 +15,7 @@ public class BinCollection : MonoBehaviour
         }
         else
         {
-            trashManager.MoveTrashToSide();
+            trashManager.MoveTrashToSide(value);
         }
     }
 }

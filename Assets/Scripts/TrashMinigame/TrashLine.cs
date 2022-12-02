@@ -13,9 +13,11 @@ public class TrashLine : MonoBehaviour
     Vector3[] rows = new Vector3[8];
     List<GameObject> trashPieces = new List<GameObject>();
     List<int> trashHeight = new List<int>();
-    private float positionIndex = 3;
-    private int movesMade;
+    private float positionIndex = 3, gameSpeed = 1;
+    private int movesMade, plasticCount, metalCount, cardboardCount, trashPlaced, score;
     private bool canMove = true;
+    private bool isGameOver;
+    private bool canRestart;
 
     void Start()
     {
@@ -23,26 +25,16 @@ public class TrashLine : MonoBehaviour
         height = Screen.height;
         for(int i = 1; i < columns.Length + 1; i++)
         {
-            columns[i - 1] = Camera.main.ScreenToWorldPoint
-                (
-                    new Vector3
-                    (
-                        (width / 7) * i - width / 14, 0, 0
-                    )
-                );
+            columns[i - 1] = Camera.main.ScreenToWorldPoint(
+                new Vector3((width / 7) * i - width / 14, 0, 0));
 
             columns[i - 1] = new Vector3(columns[i - 1].x, 0, 0);
         }
 
         for(int i = 1; i < rows.Length + 1; i++)
         {
-            rows[i - 1] = Camera.main.ScreenToWorldPoint
-                (
-                    new Vector3
-                    (
-                        0, (height / 8) * i - height / 16, 0
-                    )
-                );
+            rows[i - 1] = Camera.main.ScreenToWorldPoint(
+                new Vector3(0, (height / 8) * i - height / 16, 0));
 
             rows[i - 1] = new Vector3(0, rows[i - 1].y, 0);
         }
@@ -56,16 +48,33 @@ public class TrashLine : MonoBehaviour
 
     private void Update()
     {
-        if (movesMade == 2)
+        if (!canRestart)
         {
-            SpawnTrash();
-            movesMade = 0;
-        }
+            
+            if (isGameOver)
+            {
+                canRestart = true;
+                for(int i = trashPieces.Count - 1; i >= 0; i--)
+                {
+                    GameObject trash = trashPieces[i];
+                    trashPieces.RemoveAt(i);
+                    Destroy(trash);
+                }
+                trashHeight.Clear();
+            }
+            if (movesMade == 2)
+            {
+                SpawnTrash();
+                movesMade = 0;
+            }
 
-        if (canMove)
-        {
-            canMove = false;
-            StartCoroutine(MoveTrashDown());
+            if (canMove)
+            {
+                canMove = false;
+                StartCoroutine(MoveTrashDown());
+            }
+
+            if (plasticCount == 3 || cardboardCount == 3 || metalCount == 3) isGameOver = true;
         }
     }
 
@@ -91,7 +100,7 @@ public class TrashLine : MonoBehaviour
     private IEnumerator MoveTrashDown()
     {
 
-        for (int i = 0; i < trashPieces.Count; i++)
+        for (int i = trashPieces.Count - 1; i >= 0; i--)
         {
             trashPieces[i].transform.position = 
                 new Vector3
@@ -100,10 +109,29 @@ public class TrashLine : MonoBehaviour
                     rows[trashHeight[i]].y, 
                     trashPieces[i].transform.position.z
                 );
+            int rowNumber = 0;
 
-            trashHeight[i]--;
+            if(transform.position.x == columns[0].x)
+                rowNumber = cardboardCount;
+            else if (transform.position.x == columns[2].x)
+                rowNumber = plasticCount;
+            else if (transform.position.x == columns[4].x)
+                rowNumber = metalCount;
+
+            if (trashPieces[i].transform.position.y != rows[rowNumber].y)
+                trashHeight[i]--;
+            else
+            {
+                GameObject missedTrash = RemoveTrashFromList();
+                if (missedTrash.transform.position.x == columns[0].x)
+                    cardboardCount++;
+                else if (missedTrash.transform.position.x == columns[2].x)
+                    plasticCount++;
+                else if (missedTrash.transform.position.x == columns[4].x)
+                    metalCount++;
+            }
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(gameSpeed);
         movesMade++;
         canMove = true;
     }
@@ -129,18 +157,34 @@ public class TrashLine : MonoBehaviour
     {
         GameObject trash = RemoveTrashFromList();
         Destroy(trash);
+        trashPlaced++;
+        score++;
+        print(score);
+        if (trashPlaced % 3 == 1)
+        {
+            gameSpeed = gameSpeed * 0.9f;
+        }
     }
 
-    public void MoveTrashToSide()
+    public void MoveTrashToSide(TrashType value)
     {
+        int rowIndex = 0;
+        switch (value)
+        {
+            case TrashType.plastic: plasticCount++; rowIndex = plasticCount - 1; break;
+            case TrashType.metal: metalCount++; rowIndex = metalCount - 1; break;
+            case TrashType.cardboard: cardboardCount++; rowIndex = cardboardCount - 1; break;
+        }
+
         GameObject trash = RemoveTrashFromList();
         trash.transform.position = 
             new Vector3
             (
                 columns[(int)positionIndex - 1].x, 
-                rows[0].y, 
+                rows[rowIndex].y, 
                 transform.position.z
             );
+        trashPlaced++;
     }
 
     private GameObject RemoveTrashFromList()
