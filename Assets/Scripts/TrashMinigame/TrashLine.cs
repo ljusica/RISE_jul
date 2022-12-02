@@ -1,8 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static InputManager;
 
 public class TrashLine : MonoBehaviour
@@ -15,7 +14,7 @@ public class TrashLine : MonoBehaviour
     List<GameObject> trashPieces = new List<GameObject>();
     List<int> trashHeight = new List<int>();
     private float positionIndex = 3;
-    private bool canSpawn = true;
+    private int movesMade;
     private bool canMove = true;
 
     void Start()
@@ -24,75 +23,132 @@ public class TrashLine : MonoBehaviour
         height = Screen.height;
         for(int i = 1; i < columns.Length + 1; i++)
         {
-            columns[i - 1] = Camera.main.ScreenToWorldPoint(new Vector3((width / 7) * i - width / 14, 0, 0));
+            columns[i - 1] = Camera.main.ScreenToWorldPoint
+                (
+                    new Vector3
+                    (
+                        (width / 7) * i - width / 14, 0, 0
+                    )
+                );
+
             columns[i - 1] = new Vector3(columns[i - 1].x, 0, 0);
         }
 
         for(int i = 1; i < rows.Length + 1; i++)
         {
-            rows[i - 1] = Camera.main.ScreenToWorldPoint(new Vector3(0, (height / 8) * i - height / 16, 0));
+            rows[i - 1] = Camera.main.ScreenToWorldPoint
+                (
+                    new Vector3
+                    (
+                        0, (height / 8) * i - height / 16, 0
+                    )
+                );
+
             rows[i - 1] = new Vector3(0, rows[i - 1].y, 0);
         }
 
         transform.position = columns[(int)positionIndex];
 
         instance.horizontal.performed += MoveTrashLine;
+
+        SpawnTrash();
     }
 
-    private async void Update()
+    private void Update()
     {
-        if (canSpawn)
+        if (movesMade == 2)
         {
-            canSpawn = false;
-            await SpawnTrash();
+            SpawnTrash();
+            movesMade = 0;
         }
 
         if (canMove)
         {
             canMove = false;
-            await MoveTrashDown();
+            StartCoroutine(MoveTrashDown());
         }
     }
 
-    private async Task SpawnTrash()
+    private void SpawnTrash()
     {
-        float endTime = Time.time + 2;
-        while(Time.time < endTime)
-        {
-            await Task.Yield();
-        }
+        GameObject newTrash = 
+            Instantiate
+            (
+                trashPiece, 
+                new Vector3
+                (
+                    transform.position.x, 
+                    rows[7].y, 
+                    transform.position.z
+                ),
+                Quaternion.identity
+            );
 
-        GameObject newTrash = Instantiate(trashPiece, new Vector3(transform.position.x, rows[7].y, transform.position.z), Quaternion.identity);
         trashPieces.Add(newTrash);
         trashHeight.Add(7);
-        canSpawn = true;
     }
 
-    private async Task MoveTrashDown()
+    private IEnumerator MoveTrashDown()
     {
-        float endTime = Time.time + 1;
-        while (Time.time < endTime)
-        {
-            await Task.Yield();
-        }
 
         for (int i = 0; i < trashPieces.Count; i++)
         {
-            trashPieces[i].transform.position = new Vector3(trashPieces[i].transform.position.x, rows[trashHeight[i]].y, trashPieces[i].transform.position.z);
+            trashPieces[i].transform.position = 
+                new Vector3
+                (
+                    trashPieces[i].transform.position.x, 
+                    rows[trashHeight[i]].y, 
+                    trashPieces[i].transform.position.z
+                );
+
             trashHeight[i]--;
         }
-
+        yield return new WaitForSeconds(1);
+        movesMade++;
         canMove = true;
     }
 
-    private void MoveTrashLine(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    private void MoveTrashLine(InputAction.CallbackContext obj)
     {
         positionIndex += obj.ReadValue<float>();
         positionIndex = Mathf.Clamp(positionIndex, 0, 6);
         transform.position = columns[(int)positionIndex];
         foreach(GameObject trash in trashPieces)
         {
-            trash.transform.position = new Vector3(transform.position.x, trash.transform.position.y, trash.transform.position.z);
+            trash.transform.position = 
+                new Vector3
+                (
+                    transform.position.x, 
+                    trash.transform.position.y, 
+                    trash.transform.position.z
+                );
         }
+    }
+
+    public void CollectTrash()
+    {
+        GameObject trash = RemoveTrashFromList();
+        Destroy(trash);
+    }
+
+    public void MoveTrashToSide()
+    {
+        GameObject trash = RemoveTrashFromList();
+        trash.transform.position = 
+            new Vector3
+            (
+                columns[(int)positionIndex - 1].x, 
+                rows[0].y, 
+                transform.position.z
+            );
+    }
+
+    private GameObject RemoveTrashFromList()
+    {
+        GameObject trash = trashPieces[0];
+        trashPieces.Remove(trash);
+        trashHeight.RemoveAt(0);
+
+        return trash;
     }
 }
