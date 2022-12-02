@@ -17,6 +17,7 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
+        PlayerController.interaction = null;
         chatter = GetComponent<AudioSource>();
         namePlate = GetComponentInChildren<NamePlate>();
     }
@@ -36,7 +37,6 @@ public class Dialogue : MonoBehaviour
         {
             namePlate.HideNamePlate();
             PlayerController.interaction -= Talk;
-            PlayerController.interaction = null;
             dialogueBox.gameObject.SetActive(false);
         }
     }
