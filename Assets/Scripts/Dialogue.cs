@@ -36,12 +36,14 @@ public class Dialogue : MonoBehaviour
         {
             namePlate.HideNamePlate();
             PlayerController.interaction -= Talk;
+            PlayerController.interaction = null;
             dialogueBox.gameObject.SetActive(false);
         }
     }
 
     private void Talk()
     {
+        if (PlayerController.interaction == null) return;
         chatter.Play();
 
         for (int i = 0; i < dialogueBox.transform.childCount; i++)
