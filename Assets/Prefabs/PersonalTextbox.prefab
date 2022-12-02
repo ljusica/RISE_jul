@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -723.5, y: -502.5}
+  m_AnchoredPosition: {x: -720.5, y: -502.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4994008783658683147
@@ -144,8 +144,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: I like to dance in my free time
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d0c0a829173321a42a2eaa57a30f007f, type: 2}
-  m_sharedMaterial: {fileID: 2230449705010499816, guid: d0c0a829173321a42a2eaa57a30f007f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9152ff21570dc3a4bb69983ecbf5224d, type: 2}
+  m_sharedMaterial: {fileID: 3924603369596288893, guid: 9152ff21570dc3a4bb69983ecbf5224d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -246,7 +246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -723.5, y: -404.5}
+  m_AnchoredPosition: {x: -728.5, y: -397.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4994008783698278223
@@ -279,8 +279,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Sara Renstr\xF6m"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f8469872d10a76a47a9950e21a189562, type: 2}
-  m_sharedMaterial: {fileID: -2072376614260261823, guid: f8469872d10a76a47a9950e21a189562, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9152ff21570dc3a4bb69983ecbf5224d, type: 2}
+  m_sharedMaterial: {fileID: 3924603369596288893, guid: 9152ff21570dc3a4bb69983ecbf5224d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -304,13 +304,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 58
+  m_fontSizeBase: 58
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -422,7 +422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122.83011, y: -443.9}
+  m_AnchoredPosition: {x: 121.50003, y: -443.9}
   m_SizeDelta: {x: 1892.6597, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4994008785274583482
@@ -455,8 +455,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Senior Scientist
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d0c0a829173321a42a2eaa57a30f007f, type: 2}
-  m_sharedMaterial: {fileID: 2230449705010499816, guid: d0c0a829173321a42a2eaa57a30f007f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9152ff21570dc3a4bb69983ecbf5224d, type: 2}
+  m_sharedMaterial: {fileID: 3924603369596288893, guid: 9152ff21570dc3a4bb69983ecbf5224d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -480,8 +480,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
