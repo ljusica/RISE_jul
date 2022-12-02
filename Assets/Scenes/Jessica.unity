@@ -1105,6 +1105,10 @@ PrefabInstance:
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 950921926}
+    - target: {fileID: 7221369609343228431, guid: b4be78cb9ffeaaf498431f446278fc4b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a94463bc3ec8664f992354aae1edff8, type: 3}
     - target: {fileID: 7801734765976923260, guid: b4be78cb9ffeaaf498431f446278fc4b, type: 3}
       propertyPath: m_RootOrder
       value: 8
