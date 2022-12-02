@@ -7,11 +7,13 @@ public enum TrashType { plastic, metal, cardboard };
 public class TrashValue : MonoBehaviour
 {
     public TrashType value;
-    public Material plastic, metal, cardboard;
+    public GameObject metal, plastic, cardboard;
 
     void Start()
     {
         int trashTypeIndex = Random.Range(0, 3);
+        Quaternion metalRotation = Quaternion.Euler(270, 0, 0);
+
 
         switch (trashTypeIndex)
         {
@@ -23,13 +25,13 @@ public class TrashValue : MonoBehaviour
         switch (value)
         {
             case TrashType.plastic:
-                GetComponent<MeshRenderer>().material = plastic;
+                Instantiate(plastic, transform.position, metalRotation, transform);
                 break;
             case TrashType.metal:
-                GetComponent<MeshRenderer>().material = metal;
+                Instantiate(metal, transform.position + new Vector3(0, -0.425f, 0), metalRotation, transform);
                 break;
             case TrashType.cardboard:
-                GetComponent<MeshRenderer>().material = cardboard;
+                Instantiate(cardboard, transform.position, metalRotation, transform);
                 break;
         }
     }
