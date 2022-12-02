@@ -15,6 +15,7 @@ public class Objectives : MonoBehaviour
     public List<string> npcNames = new List<string>();
     [SerializeField] Transform npcParent;
     [SerializeField] Transform miniGamesParent;
+    [SerializeField] TMP_Text talkToObjectiveText;
 
     private static Objectives instance;
     public static Objectives Instance { get { return instance; } }
@@ -34,10 +35,12 @@ public class Objectives : MonoBehaviour
     {
         if (npcNames.Contains(name)) return;
     
-        Debug.Log("kallad, action");
         npcNames.Add(name);
         objectiveProgress++;
-        Debug.Log(objectiveProgress + "/" + talkToObjective);
+        talkToObjectiveText.text = "Talk to your colleagues: " + objectiveProgress + "/" + talkToObjective;
+        if (objectiveProgress >= talkToObjective)
+            Debug.Log("You won!");
+
         return;
 
     }

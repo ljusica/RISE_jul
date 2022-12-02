@@ -5,9 +5,17 @@ using UnityEngine;
 public class BinCollection : MonoBehaviour
 {
     public TrashLine trashManager;
+    public TrashType value;
 
     private void OnTriggerEnter(Collider other)
     {
-        trashManager.CollectTrash();
+        if(other.GetComponent<TrashValue>().value == value)
+        {
+            trashManager.CollectTrash();
+        }
+        else
+        {
+            trashManager.MoveTrashToSide();
+        }
     }
 }
