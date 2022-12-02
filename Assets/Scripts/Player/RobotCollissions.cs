@@ -58,6 +58,7 @@ public class RobotCollissions : MonoBehaviour
         if (col.CompareTag("Respawn"))
         {
             transform.position = startPos;
+            rb.velocity = Vector3.zero;
         }
 
         if (col.CompareTag("Playzone"))
