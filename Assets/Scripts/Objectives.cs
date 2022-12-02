@@ -17,6 +17,8 @@ public class Objectives : MonoBehaviour
     [SerializeField] Transform miniGamesParent;
     [SerializeField] TMP_Text talkToObjectiveText;
 
+    [SerializeField] TMP_Text miniGamesPlayedText;
+
     private static Objectives instance;
     public static Objectives Instance { get { return instance; } }
 
@@ -28,7 +30,7 @@ public class Objectives : MonoBehaviour
             Destroy(gameObject);
 
         talkToObjective = npcParent.childCount;
-        //miniGamesObjective = miniGamesParent.childCount;
+        miniGamesObjective = miniGamesParent.childCount;
     }
 
     public void CheckObjective(string name)
@@ -37,7 +39,7 @@ public class Objectives : MonoBehaviour
     
         npcNames.Add(name);
         objectiveProgress++;
-        talkToObjectiveText.text = "Talk to your colleagues: " + objectiveProgress + "/" + talkToObjective;
+        talkToObjectiveText.text = "Talk to your colleagues: " + objectiveProgress + " / " + talkToObjective;
         if (objectiveProgress >= talkToObjective)
             Debug.Log("You won!");
 
@@ -48,7 +50,8 @@ public class Objectives : MonoBehaviour
     public void AddMiniGamesPlayedProgress()
     {
         miniGamesPlayed++;
-        //Debug.Log(miniGamesPlayed + "/" + miniGamesObjective);
+        miniGamesPlayedText.text = "Minigames Played: " + miniGamesPlayed + " / " + miniGamesObjective;
+        Debug.Log(miniGamesPlayed + "/" + miniGamesObjective);
 
     }
 }

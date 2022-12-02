@@ -8,6 +8,7 @@ TagManager:
   - Chair
   - Winzone
   - Playzone
+  - Objective
   layers:
   - Default
   - TransparentFX
