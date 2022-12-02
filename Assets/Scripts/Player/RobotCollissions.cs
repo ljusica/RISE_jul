@@ -7,6 +7,8 @@ public class RobotCollissions : MonoBehaviour
     [SerializeField] private GameObject[] fireworks;
     [SerializeField] private float force;
 
+    [SerializeField] RoboGameHandler gameHandler;
+
     private ParticleSystem[] fireworkParticles;
     private AudioSource[] fireworkSounds;
 
@@ -76,6 +78,7 @@ public class RobotCollissions : MonoBehaviour
 
         yield return new WaitForSeconds(1.2f);
         PlayFireworks(2);
+        gameHandler.GoBackToOffice();
     }
 
     private void PlayFireworks(int index)
