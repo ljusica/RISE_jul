@@ -36,7 +36,7 @@ public class RoboGameHandler : MonoBehaviour
     private void startGame()
     {
         playerController.canMove = false;
-        robotController.canRobotMove = false;
+        robotController.canRobotMove = true;
         CameraCheck();
 
         roboCamera.gameObject.SetActive(true);
@@ -62,7 +62,7 @@ public class RoboGameHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         playerController.canMove = true;
-        robotController.canRobotMove = true;
+        robotController.canRobotMove = false;
         CameraCheck();
 
         officeVirtualCamera.Priority = CameraPriorityLevel.priorityLevel;
