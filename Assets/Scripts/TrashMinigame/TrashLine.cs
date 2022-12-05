@@ -211,7 +211,7 @@ public class TrashLine : MonoBehaviour
         for (int i = trashPieces.Count - 1; i >= 0; i--)
         {
             GameObject trash = trashPieces[i];
-            trashPieces.RemoveAt(i);
+            trashPieces.Remove(trash);
             Destroy(trash);
         }
         for (int i = trashMissed.Count - 1; i >= 0; i--)
