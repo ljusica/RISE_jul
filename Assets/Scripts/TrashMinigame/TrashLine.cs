@@ -20,34 +20,7 @@ public class TrashLine : MonoBehaviour
     private bool canMove = true;
     private bool isGameOver;
 
-    public void Start()
-    {
-        FreshStart();
-        width = Screen.width;
-        height = Screen.height;
-        for(int i = 1; i < columns.Length + 1; i++)
-        {
-            columns[i - 1] = Camera.main.ScreenToWorldPoint(
-                new Vector3((width / 7) * i - width / 14, 0, 0));
-
-            columns[i - 1] = new Vector3(columns[i - 1].x, 0, 0);
-        }
-
-        for(int i = 1; i < rows.Length + 1; i++)
-        {
-            rows[i - 1] = Camera.main.ScreenToWorldPoint(
-                new Vector3(0, (height / 8) * i - height / 16, 0));
-
-            rows[i - 1] = new Vector3(0, rows[i - 1].y, 0);
-        }
-
-        transform.position = columns[(int)positionIndex];
-
-        instance.horizontal.performed += MoveTrashLine;
-
-    }
-
-    private void Update()
+     private void Update()
     {
         if (!canRestart)
         {
@@ -213,8 +186,28 @@ public class TrashLine : MonoBehaviour
         score = 0;
         canMove = true;
         isGameOver = false;
+        width = Screen.width;
+        height = Screen.height;
+        for (int i = 1; i < columns.Length + 1; i++)
+        {
+            columns[i - 1] = Camera.main.ScreenToWorldPoint(
+                new Vector3((width / 7) * i - width / 14, 0, 0));
 
-        for(int i = trashMissed.Count - 1; i >= 0; i--)
+            columns[i - 1] = new Vector3(columns[i - 1].x, 0, 0);
+        }
+
+        for (int i = 1; i < rows.Length + 1; i++)
+        {
+            rows[i - 1] = Camera.main.ScreenToWorldPoint(
+                new Vector3(0, (height / 8) * i - height / 16, 0));
+
+            rows[i - 1] = new Vector3(0, rows[i - 1].y, 0);
+        }
+
+        transform.position = columns[(int)positionIndex];
+
+        instance.horizontal.performed += MoveTrashLine;
+        for (int i = trashMissed.Count - 1; i >= 0; i--)
         {
             GameObject trash = trashMissed[i];
             trashMissed.Remove(trash);
