@@ -13,6 +13,7 @@ public class TrashValue : MonoBehaviour
     {
         int trashTypeIndex = Random.Range(0, 3);
         Quaternion metalRotation = Quaternion.Euler(270, 0, 0);
+        Quaternion plasticRotation = Quaternion.Euler(270, 180, 0);
 
 
         switch (trashTypeIndex)
@@ -25,7 +26,7 @@ public class TrashValue : MonoBehaviour
         switch (value)
         {
             case TrashType.plastic:
-                Instantiate(plastic, transform.position, metalRotation, transform);
+                Instantiate(plastic, transform.position + new Vector3(0, -0.6f, 0), plasticRotation, transform);
                 break;
             case TrashType.metal:
                 Instantiate(metal, transform.position + new Vector3(0, -0.425f, 0), metalRotation, transform);

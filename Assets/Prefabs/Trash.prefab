@@ -77,5 +77,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 0
   metal: {fileID: 919132149155446097, guid: 2a1116933acac684b903911fe6614623, type: 3}
-  plastic: {fileID: 3720609113380977305, guid: bcc0d50db933377498974a1ee1d77a28, type: 3}
+  plastic: {fileID: 8822283112432131472, guid: 0232771e6a3996c438956d05fe16bbea, type: 3}
   cardboard: {fileID: 75892930714730205, guid: 9c584d12c7b9e5f478a4a3a0b9bfee13, type: 3}

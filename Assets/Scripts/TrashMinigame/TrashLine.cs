@@ -13,14 +13,16 @@ public class TrashLine : MonoBehaviour
     Vector3[] rows = new Vector3[8];
     List<GameObject> trashPieces = new List<GameObject>();
     List<int> trashHeight = new List<int>();
+    List<GameObject> trashMissed = new List<GameObject>();
     private float positionIndex = 3, gameSpeed = 1;
     private int movesMade, plasticCount, metalCount, cardboardCount, trashPlaced, score;
     private bool canMove = true;
     private bool isGameOver;
     private bool canRestart;
 
-    void Start()
+    public void Start()
     {
+        FreshStart();
         width = Screen.width;
         height = Screen.height;
         for(int i = 1; i < columns.Length + 1; i++)
@@ -185,6 +187,7 @@ public class TrashLine : MonoBehaviour
                 transform.position.z
             );
         trashPlaced++;
+        trashMissed.Add(trash);
     }
 
     private GameObject RemoveTrashFromList()
@@ -194,5 +197,27 @@ public class TrashLine : MonoBehaviour
         trashHeight.RemoveAt(0);
 
         return trash;
+    }
+
+    private void FreshStart()
+    {
+        gameSpeed = 1;
+        positionIndex = 3;
+        movesMade = 0;
+        plasticCount = 0;
+        metalCount = 0;
+        cardboardCount = 0;
+        trashPlaced = 0;
+        score = 0;
+        canMove = true;
+        isGameOver = false;
+        canRestart = false;
+
+        for(int i = trashMissed.Count - 1; i >= 0; i--)
+        {
+            GameObject trash = trashMissed[i];
+            trashMissed.Remove(trash);
+            Destroy(trash);
+        }
     }
 }
