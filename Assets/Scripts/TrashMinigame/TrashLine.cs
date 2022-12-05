@@ -208,6 +208,12 @@ public class TrashLine : MonoBehaviour
         transform.position = columns[(int)positionIndex];
 
         instance.horizontal.performed += MoveTrashLine;
+        for (int i = trashPieces.Count - 1; i >= 0; i--)
+        {
+            GameObject trash = trashPieces[i];
+            trashPieces.RemoveAt(i);
+            Destroy(trash);
+        }
         for (int i = trashMissed.Count - 1; i >= 0; i--)
         {
             GameObject trash = trashMissed[i];
