@@ -25,21 +25,22 @@ public class RoboGameHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerController.interaction += startGame;
+        PlayerController.interaction += StartGame;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        PlayerController.interaction -= startGame;
+        PlayerController.interaction -= StartGame;
     }
 
-    private void startGame()
+    private void StartGame()
     {
         playerController.canMove = false;
         robotController.canRobotMove = true;
         CameraCheck();
 
         roboCamera.gameObject.SetActive(true);
+        officeVirtualCamera.Priority = (CameraPriorityLevel.priorityLevel - 10);
         roboVirtualCamera.Priority = CameraPriorityLevel.priorityLevel;
         CameraPriorityLevel.priorityLevel++;
     }

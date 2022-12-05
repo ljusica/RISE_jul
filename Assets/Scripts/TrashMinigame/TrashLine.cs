@@ -174,7 +174,7 @@ public class TrashLine : MonoBehaviour
         return trash;
     }
 
-    private void FreshStart()
+    public void FreshStart()
     {
         gameSpeed = 1;
         positionIndex = 3;
