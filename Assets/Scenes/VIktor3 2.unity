@@ -21996,6 +21996,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5878516693072229745, guid: a01481cb6f3c7884983c506336d3022b, type: 3}
+      propertyPath: trashCamera
+      value: 
+      objectReference: {fileID: 1105191002}
     - target: {fileID: 5878516693474559515, guid: a01481cb6f3c7884983c506336d3022b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -84244,7 +84248,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255368237394944169}
-  m_LocalRotation: {x: 0.3016186, y: 0.5736311, z: -0.23931117, w: 0.7229825}
+  m_LocalRotation: {x: 0.30161858, y: 0.5736311, z: -0.23931117, w: 0.7229826}
   m_LocalPosition: {x: 13.470343, y: 7.673644, z: -10.823542}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -86656,7 +86660,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255368238043193359}
-  m_LocalRotation: {x: 0.3016186, y: 0.5736311, z: -0.23931117, w: 0.7229825}
+  m_LocalRotation: {x: 0.30161858, y: 0.5736311, z: -0.23931117, w: 0.7229826}
   m_LocalPosition: {x: 18.653, y: 7.304, z: -3.726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

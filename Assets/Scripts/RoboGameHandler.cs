@@ -15,12 +15,13 @@ public class RoboGameHandler : MonoBehaviour
 
     private PlayerController playerController;
     private RobotController robotController;
+    private Objectives objectiveHandler;
 
     private void Start()
-    {
+    { 
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         robotController = GameObject.FindGameObjectWithTag("Robot").GetComponent<RobotController>();
-        
+        objectiveHandler = GameObject.FindGameObjectWithTag("Objective").GetComponent<Objectives>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,6 +36,7 @@ public class RoboGameHandler : MonoBehaviour
 
     private void StartGame()
     {
+        objectiveHandler.AddMiniGamesPlayedProgress();
         playerController.canMove = false;
         robotController.canRobotMove = true;
         CameraCheck();
@@ -64,10 +66,10 @@ public class RoboGameHandler : MonoBehaviour
         yield return new WaitForSeconds(1f);
         playerController.canMove = true;
         robotController.canRobotMove = false;
+        roboCamera.gameObject.SetActive(false);
+        CameraPriorityLevel.priorityLevel++;
+        officeVirtualCamera.Priority = CameraPriorityLevel.priorityLevel;
         CameraCheck();
 
-        officeVirtualCamera.Priority = CameraPriorityLevel.priorityLevel;
-        CameraPriorityLevel.priorityLevel++;
-        roboCamera.gameObject.SetActive(false);
     }
 }

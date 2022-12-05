@@ -51,6 +51,5 @@ public class Objectives : MonoBehaviour
         miniGamesPlayed++;
         miniGamesPlayedText.text = "Minigames Played: " + miniGamesPlayed + " / " + miniGamesObjective;
         Debug.Log(miniGamesPlayed + "/" + miniGamesObjective);
-
     }
 }

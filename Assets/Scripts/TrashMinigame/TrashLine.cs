@@ -194,7 +194,7 @@ public class TrashLine : MonoBehaviour
             columns[i - 1] = trashCamera.ScreenToWorldPoint(
                 new Vector3((width / 7) * i - width / 14, 0, 0));
 
-            columns[i - 1] = new Vector3(columns[i - 1].x, 0, 0);
+            columns[i - 1] = new Vector3(columns[i - 1].x, 0, transform.position.z);
         }
 
         for (int i = 1; i < rows.Length + 1; i++)
@@ -202,7 +202,7 @@ public class TrashLine : MonoBehaviour
             rows[i - 1] = trashCamera.ScreenToWorldPoint(
                 new Vector3(0, (height / 8) * i - height / 16, 0));
 
-            rows[i - 1] = new Vector3(0, rows[i - 1].y, 0);
+            rows[i - 1] = new Vector3(transform.position.x, rows[i - 1].y, transform.position.z);
         }
 
         transform.position = columns[(int)positionIndex];

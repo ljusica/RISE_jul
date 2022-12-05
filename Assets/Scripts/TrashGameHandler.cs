@@ -11,11 +11,13 @@ public class TrashGameHandler : MonoBehaviour
     [SerializeField] TrashLine trashLine;
 
     private PlayerController playerController;
+    private Objectives objectiveHandler;
 
     void Start()
     {
         trashCamera.gameObject.SetActive(false);
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        objectiveHandler = GameObject.FindGameObjectWithTag("Objective").GetComponent<Objectives>();
     }
 
 
@@ -31,6 +33,7 @@ public class TrashGameHandler : MonoBehaviour
 
     private void StartGame()
     {
+        objectiveHandler.AddMiniGamesPlayedProgress();
         trashLine.FreshStart();
         trashLine.canRestart = false;
 
