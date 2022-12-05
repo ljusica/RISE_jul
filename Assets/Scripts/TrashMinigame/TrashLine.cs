@@ -9,6 +9,7 @@ public class TrashLine : MonoBehaviour
     public GameObject bin1, bin2, bin3, trashPiece;
     public bool canRestart = true;
     public Camera trashCamera;
+    public int score;
 
     float width, height;
     Vector3[] columns = new Vector3[7];
@@ -17,7 +18,7 @@ public class TrashLine : MonoBehaviour
     List<int> trashHeight = new List<int>();
     List<GameObject> trashMissed = new List<GameObject>();
     private float positionIndex = 3, gameSpeed = 1;
-    private int movesMade, plasticCount, metalCount, cardboardCount, trashPlaced, score;
+    private int movesMade, plasticCount, metalCount, cardboardCount, trashPlaced;
     private bool canMove = true;
     private bool isGameOver;
 
@@ -137,7 +138,6 @@ public class TrashLine : MonoBehaviour
         Destroy(trash);
         trashPlaced++;
         score++;
-        print(score);
         if (trashPlaced % 3 == 1)
         {
             gameSpeed = gameSpeed * 0.9f;
@@ -208,6 +208,12 @@ public class TrashLine : MonoBehaviour
         transform.position = columns[(int)positionIndex];
 
         instance.horizontal.performed += MoveTrashLine;
+        for (int i = trashPieces.Count - 1; i >= 0; i--)
+        {
+            GameObject trash = trashPieces[i];
+            trashPieces.RemoveAt(i);
+            Destroy(trash);
+        }
         for (int i = trashMissed.Count - 1; i >= 0; i--)
         {
             GameObject trash = trashMissed[i];
