@@ -238,6 +238,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!20 &1357786146 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5878516693474559513, guid: a01481cb6f3c7884983c506336d3022b, type: 3}
+  m_PrefabInstance: {fileID: 5878516693109230015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1802228845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346,6 +351,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5878516693072229745, guid: a01481cb6f3c7884983c506336d3022b, type: 3}
+      propertyPath: trashCamera
+      value: 
+      objectReference: {fileID: 1357786146}
     - target: {fileID: 9021633303798925462, guid: a01481cb6f3c7884983c506336d3022b, type: 3}
       propertyPath: m_Name
       value: TrashMinigame
