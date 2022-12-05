@@ -32,7 +32,7 @@ public class TrashValue : MonoBehaviour
                 Instantiate(metal, transform.position + new Vector3(0, -0.425f, 0), metalRotation, transform);
                 break;
             case TrashType.cardboard:
-                Instantiate(cardboard, transform.position, metalRotation, transform);
+                Instantiate(cardboard, transform.position + new Vector3(0, -0.457f, 0), metalRotation, transform);
                 break;
         }
     }
