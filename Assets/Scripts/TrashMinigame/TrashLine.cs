@@ -220,5 +220,6 @@ public class TrashLine : MonoBehaviour
             trashMissed.Remove(trash);
             Destroy(trash);
         }
+        trashHeight.Clear();
     }
 }
