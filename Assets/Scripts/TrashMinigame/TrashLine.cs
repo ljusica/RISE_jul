@@ -177,6 +177,7 @@ public class TrashLine : MonoBehaviour
 
     public void FreshStart()
     {
+        StopAllCoroutines();
         gameSpeed = 1;
         positionIndex = 3;
         movesMade = 0;
