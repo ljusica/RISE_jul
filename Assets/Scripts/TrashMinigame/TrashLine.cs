@@ -7,50 +7,25 @@ using static InputManager;
 public class TrashLine : MonoBehaviour
 {
     public GameObject bin1, bin2, bin3, trashPiece;
+    public bool canRestart = true;
+    public Camera trashCamera;
 
     float width, height;
     Vector3[] columns = new Vector3[7];
     Vector3[] rows = new Vector3[8];
     List<GameObject> trashPieces = new List<GameObject>();
     List<int> trashHeight = new List<int>();
+    List<GameObject> trashMissed = new List<GameObject>();
     private float positionIndex = 3, gameSpeed = 1;
     private int movesMade, plasticCount, metalCount, cardboardCount, trashPlaced, score;
     private bool canMove = true;
     private bool isGameOver;
-    private bool canRestart;
 
-    void Start()
-    {
-        width = Screen.width;
-        height = Screen.height;
-        for(int i = 1; i < columns.Length + 1; i++)
-        {
-            columns[i - 1] = Camera.main.ScreenToWorldPoint(
-                new Vector3((width / 7) * i - width / 14, 0, 0));
-
-            columns[i - 1] = new Vector3(columns[i - 1].x, 0, 0);
-        }
-
-        for(int i = 1; i < rows.Length + 1; i++)
-        {
-            rows[i - 1] = Camera.main.ScreenToWorldPoint(
-                new Vector3(0, (height / 8) * i - height / 16, 0));
-
-            rows[i - 1] = new Vector3(0, rows[i - 1].y, 0);
-        }
-
-        transform.position = columns[(int)positionIndex];
-
-        instance.horizontal.performed += MoveTrashLine;
-
-        SpawnTrash();
-    }
-
-    private void Update()
+     private void Update()
     {
         if (!canRestart)
         {
-            
+            if (trashPieces.Count == 0) SpawnTrash();
             if (isGameOver)
             {
                 canRestart = true;
@@ -138,18 +113,21 @@ public class TrashLine : MonoBehaviour
 
     private void MoveTrashLine(InputAction.CallbackContext obj)
     {
-        positionIndex += obj.ReadValue<float>();
-        positionIndex = Mathf.Clamp(positionIndex, 0, 6);
-        transform.position = columns[(int)positionIndex];
-        foreach(GameObject trash in trashPieces)
+        if (!canRestart)
         {
-            trash.transform.position = 
-                new Vector3
-                (
-                    transform.position.x, 
-                    trash.transform.position.y, 
-                    trash.transform.position.z
-                );
+            positionIndex += obj.ReadValue<float>();
+            positionIndex = Mathf.Clamp(positionIndex, 0, 6);
+            transform.position = columns[(int)positionIndex];
+            foreach(GameObject trash in trashPieces)
+            {
+                trash.transform.position = 
+                    new Vector3
+                    (
+                        transform.position.x, 
+                        trash.transform.position.y, 
+                        trash.transform.position.z
+                    );
+            }
         }
     }
 
@@ -185,6 +163,7 @@ public class TrashLine : MonoBehaviour
                 transform.position.z
             );
         trashPlaced++;
+        trashMissed.Add(trash);
     }
 
     private GameObject RemoveTrashFromList()
@@ -194,5 +173,46 @@ public class TrashLine : MonoBehaviour
         trashHeight.RemoveAt(0);
 
         return trash;
+    }
+
+    public void FreshStart()
+    {
+        gameSpeed = 1;
+        positionIndex = 3;
+        movesMade = 0;
+        plasticCount = 0;
+        metalCount = 0;
+        cardboardCount = 0;
+        trashPlaced = 0;
+        score = 0;
+        canMove = true;
+        isGameOver = false;
+        width = Screen.width;
+        height = Screen.height;
+        for (int i = 1; i < columns.Length + 1; i++)
+        {
+            columns[i - 1] = trashCamera.ScreenToWorldPoint(
+                new Vector3((width / 7) * i - width / 14, 0, 0));
+
+            columns[i - 1] = new Vector3(columns[i - 1].x, 0, transform.position.z);
+        }
+
+        for (int i = 1; i < rows.Length + 1; i++)
+        {
+            rows[i - 1] = trashCamera.ScreenToWorldPoint(
+                new Vector3(0, (height / 8) * i - height / 16, 0));
+
+            rows[i - 1] = new Vector3(transform.position.x, rows[i - 1].y, transform.position.z);
+        }
+
+        transform.position = columns[(int)positionIndex];
+
+        instance.horizontal.performed += MoveTrashLine;
+        for (int i = trashMissed.Count - 1; i >= 0; i--)
+        {
+            GameObject trash = trashMissed[i];
+            trashMissed.Remove(trash);
+            Destroy(trash);
+        }
     }
 }

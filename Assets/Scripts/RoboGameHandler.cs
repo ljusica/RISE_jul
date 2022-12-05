@@ -15,31 +15,34 @@ public class RoboGameHandler : MonoBehaviour
 
     private PlayerController playerController;
     private RobotController robotController;
+    private Objectives objectiveHandler;
 
     private void Start()
-    {
+    { 
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         robotController = GameObject.FindGameObjectWithTag("Robot").GetComponent<RobotController>();
-        
+        objectiveHandler = GameObject.FindGameObjectWithTag("Objective").GetComponent<Objectives>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerController.interaction += startGame;
+        PlayerController.interaction += StartGame;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        PlayerController.interaction -= startGame;
+        PlayerController.interaction -= StartGame;
     }
 
-    private void startGame()
+    private void StartGame()
     {
+        objectiveHandler.AddMiniGamesPlayedProgress();
         playerController.canMove = false;
         robotController.canRobotMove = true;
         CameraCheck();
 
         roboCamera.gameObject.SetActive(true);
+        officeVirtualCamera.Priority = (CameraPriorityLevel.priorityLevel - 10);
         roboVirtualCamera.Priority = CameraPriorityLevel.priorityLevel;
         CameraPriorityLevel.priorityLevel++;
     }
@@ -63,10 +66,10 @@ public class RoboGameHandler : MonoBehaviour
         yield return new WaitForSeconds(1f);
         playerController.canMove = true;
         robotController.canRobotMove = false;
+        roboCamera.gameObject.SetActive(false);
+        CameraPriorityLevel.priorityLevel++;
+        officeVirtualCamera.Priority = CameraPriorityLevel.priorityLevel;
         CameraCheck();
 
-        officeVirtualCamera.Priority = CameraPriorityLevel.priorityLevel;
-        CameraPriorityLevel.priorityLevel++;
-        roboCamera.gameObject.SetActive(false);
     }
 }

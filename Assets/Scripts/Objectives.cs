@@ -16,7 +16,6 @@ public class Objectives : MonoBehaviour
     [SerializeField] Transform npcParent;
     [SerializeField] Transform miniGamesParent;
     [SerializeField] TMP_Text talkToObjectiveText;
-
     [SerializeField] TMP_Text miniGamesPlayedText;
 
     private static Objectives instance;
@@ -52,6 +51,5 @@ public class Objectives : MonoBehaviour
         miniGamesPlayed++;
         miniGamesPlayedText.text = "Minigames Played: " + miniGamesPlayed + " / " + miniGamesObjective;
         Debug.Log(miniGamesPlayed + "/" + miniGamesObjective);
-
     }
 }
