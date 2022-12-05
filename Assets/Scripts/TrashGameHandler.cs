@@ -4,6 +4,7 @@ using UnityEngine;
 using static PlayerController;
 using static InputManager;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class TrashGameHandler : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class TrashGameHandler : MonoBehaviour
     [SerializeField] Camera mainCamera;
 
     [SerializeField] TrashLine trashLine;
+
+    [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text[] objectiveText;
 
     private PlayerController playerController;
     private Objectives objectiveHandler;
@@ -37,11 +41,18 @@ public class TrashGameHandler : MonoBehaviour
 
     private void StartGame()
     {
-        objectiveHandler.AddMiniGamesPlayedProgress();
+        objectiveHandler.AddMiniGamesPlayedProgress(this.name);
         trashLine.FreshStart();
         trashLine.canRestart = false;
-
         playerController.canMove = false;
+
+        foreach (var objectiveText in objectiveText)
+        {
+            objectiveText.gameObject.SetActive(false);
+        }
+
+        scoreText.gameObject.SetActive(true);
+
         trashCamera.gameObject.SetActive(true);
         mainCamera.gameObject.SetActive(false);
     }
@@ -50,6 +61,14 @@ public class TrashGameHandler : MonoBehaviour
     {
         trashLine.canRestart = true;
         playerController.canMove = true;
+
+        foreach (var objectiveText in objectiveText)
+        {
+            objectiveText.gameObject.SetActive(true);
+        }
+
+        scoreText.gameObject.SetActive(false);
+
         trashCamera.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(true);
     }

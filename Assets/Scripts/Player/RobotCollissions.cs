@@ -59,7 +59,7 @@ public class RobotCollissions : MonoBehaviour
     {
         if (col.CompareTag("Respawn"))
         {
-            transform.position = startPos;
+            Respawn();
             rb.velocity = Vector3.zero;
         }
 
@@ -67,6 +67,11 @@ public class RobotCollissions : MonoBehaviour
         {
             robotController.isGrounded = false;
         }
+    }
+
+    public void Respawn()
+    {
+        transform.position = startPos;
     }
 
     IEnumerator SpawnFireworks()

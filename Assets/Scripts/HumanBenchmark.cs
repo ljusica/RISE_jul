@@ -54,7 +54,7 @@ public class HumanBenchmark : MonoBehaviour
     {
         if (!hasBeenPlayed)
         {
-            objectiveHandler.AddMiniGamesPlayedProgress();
+            objectiveHandler.AddMiniGamesPlayedProgress(this.name);
             hasBeenPlayed = true;
         }
 
