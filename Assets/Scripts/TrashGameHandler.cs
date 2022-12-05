@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static PlayerController;
+using static InputManager;
+using UnityEngine.InputSystem;
 
 public class TrashGameHandler : MonoBehaviour
 {
@@ -24,11 +26,13 @@ public class TrashGameHandler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerController.interaction += StartGame;
+        instance.inputControls.Actions.Escape.performed += StopGame;
     }
 
     private void OnTriggerExit(Collider other)
     {
         PlayerController.interaction -= StartGame;
+        instance.inputControls.Actions.Escape.performed -= StopGame;
     }
 
     private void StartGame()
@@ -42,12 +46,12 @@ public class TrashGameHandler : MonoBehaviour
         mainCamera.gameObject.SetActive(false);
     }
 
-    private void StopGame()
+    private void StopGame(InputAction.CallbackContext context)
     {
         trashLine.canRestart = true;
         playerController.canMove = true;
-        trashCamera.gameObject.SetActive(true);
-        mainCamera.gameObject.SetActive(false);
+        trashCamera.gameObject.SetActive(false);
+        mainCamera.gameObject.SetActive(true);
     }
 
 }
