@@ -8,6 +8,7 @@ public class TrashLine : MonoBehaviour
 {
     public GameObject bin1, bin2, bin3, trashPiece;
     public bool canRestart = true;
+    public Camera trashCamera;
 
     float width, height;
     Vector3[] columns = new Vector3[7];
@@ -190,7 +191,7 @@ public class TrashLine : MonoBehaviour
         height = Screen.height;
         for (int i = 1; i < columns.Length + 1; i++)
         {
-            columns[i - 1] = Camera.main.ScreenToWorldPoint(
+            columns[i - 1] = trashCamera.ScreenToWorldPoint(
                 new Vector3((width / 7) * i - width / 14, 0, 0));
 
             columns[i - 1] = new Vector3(columns[i - 1].x, 0, 0);
@@ -198,7 +199,7 @@ public class TrashLine : MonoBehaviour
 
         for (int i = 1; i < rows.Length + 1; i++)
         {
-            rows[i - 1] = Camera.main.ScreenToWorldPoint(
+            rows[i - 1] = trashCamera.ScreenToWorldPoint(
                 new Vector3(0, (height / 8) * i - height / 16, 0));
 
             rows[i - 1] = new Vector3(0, rows[i - 1].y, 0);
