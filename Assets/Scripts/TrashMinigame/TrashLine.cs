@@ -7,6 +7,7 @@ using static InputManager;
 public class TrashLine : MonoBehaviour
 {
     public GameObject bin1, bin2, bin3, trashPiece;
+    public bool canRestart = true;
 
     float width, height;
     Vector3[] columns = new Vector3[7];
@@ -18,7 +19,6 @@ public class TrashLine : MonoBehaviour
     private int movesMade, plasticCount, metalCount, cardboardCount, trashPlaced, score;
     private bool canMove = true;
     private bool isGameOver;
-    private bool canRestart;
 
     public void Start()
     {
@@ -45,14 +45,13 @@ public class TrashLine : MonoBehaviour
 
         instance.horizontal.performed += MoveTrashLine;
 
-        SpawnTrash();
     }
 
     private void Update()
     {
         if (!canRestart)
         {
-            
+            if (trashPieces.Count == 0) SpawnTrash();
             if (isGameOver)
             {
                 canRestart = true;
@@ -211,7 +210,6 @@ public class TrashLine : MonoBehaviour
         score = 0;
         canMove = true;
         isGameOver = false;
-        canRestart = false;
 
         for(int i = trashMissed.Count - 1; i >= 0; i--)
         {
