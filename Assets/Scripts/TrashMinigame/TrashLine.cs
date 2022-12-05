@@ -139,18 +139,21 @@ public class TrashLine : MonoBehaviour
 
     private void MoveTrashLine(InputAction.CallbackContext obj)
     {
-        positionIndex += obj.ReadValue<float>();
-        positionIndex = Mathf.Clamp(positionIndex, 0, 6);
-        transform.position = columns[(int)positionIndex];
-        foreach(GameObject trash in trashPieces)
+        if (!canRestart)
         {
-            trash.transform.position = 
-                new Vector3
-                (
-                    transform.position.x, 
-                    trash.transform.position.y, 
-                    trash.transform.position.z
-                );
+            positionIndex += obj.ReadValue<float>();
+            positionIndex = Mathf.Clamp(positionIndex, 0, 6);
+            transform.position = columns[(int)positionIndex];
+            foreach(GameObject trash in trashPieces)
+            {
+                trash.transform.position = 
+                    new Vector3
+                    (
+                        transform.position.x, 
+                        trash.transform.position.y, 
+                        trash.transform.position.z
+                    );
+            }
         }
     }
 
