@@ -7,13 +7,19 @@ using static InputManager;
 public class RobotController : MonoBehaviour
 {
     public bool isGrounded;
+
+    private PlayerController playerController;
     
     private Rigidbody rigidBody;
     private Vector3 inputs, direction, lookDirection, savedDirection;
     private bool newDirection = false;
 
+    public bool canRobotMove = false;
+
     void Start()
     {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
         rigidBody = GetComponent<Rigidbody>();
         instance.inputControls.Actions.Vertical.canceled += SaveDirectionInput;
         instance.inputControls.Actions.Horizontal.canceled += SaveDirectionInput;
@@ -23,6 +29,9 @@ public class RobotController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (playerController.canMove) return;
+        if (!canRobotMove) return;
+
         if (isGrounded)
         {
             inputs = new Vector3(instance.horizontal.ReadValue<float>(), 0, instance.vertical.ReadValue<float>());

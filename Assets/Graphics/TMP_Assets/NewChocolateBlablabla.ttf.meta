@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: af52d5310d3dce84ebbb0ab17f36c6ed
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Chocolate Covered Raindrops
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0de27e74cb1fe2248a4e4df63714604b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

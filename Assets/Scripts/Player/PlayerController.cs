@@ -10,11 +10,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rigidBody;
     private Vector3 movement, clampedVelocity;
     public float speed = 10;
-    private bool canMove;
+    public bool canMove;
     private float targetAngleY;
     private Vector3 camCompensatedMovement;
-
-
 
     void Start()
     {

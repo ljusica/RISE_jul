@@ -13,6 +13,9 @@ public class HumanBenchmark : MonoBehaviour
     [SerializeField] float timeSinceGameStart;
     [SerializeField] float timeGreen;
 
+    private Objectives objectiveHandler;
+    private bool hasBeenPlayed = false;
+
     [Header("TMP Fields")]
     [SerializeField] TMP_Text startText;
     [SerializeField] TMP_Text stateText;
@@ -28,6 +31,8 @@ public class HumanBenchmark : MonoBehaviour
 
     private void Start()
     {
+        objectiveHandler = GameObject.FindGameObjectWithTag("Objective").GetComponent<Objectives>();
+
         image = GetComponent<Image>();
         image.color = Color.blue;
     }
@@ -47,6 +52,11 @@ public class HumanBenchmark : MonoBehaviour
 
     public void Click()
     {
+        if (!hasBeenPlayed)
+        {
+            objectiveHandler.AddMiniGamesPlayedProgress();
+            hasBeenPlayed = true;
+        }
 
         switch (state)
         {
