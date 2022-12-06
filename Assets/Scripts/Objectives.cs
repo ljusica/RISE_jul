@@ -13,6 +13,7 @@ public class Objectives : MonoBehaviour
     public int miniGamesPlayed = 0;
 
     public List<string> npcNames = new List<string>();
+    public List<string> miniGames = new List<string>();
     [SerializeField] Transform npcParent;
     [SerializeField] Transform miniGamesParent;
     [SerializeField] TMP_Text talkToObjectiveText;
@@ -39,17 +40,15 @@ public class Objectives : MonoBehaviour
         npcNames.Add(name);
         objectiveProgress++;
         talkToObjectiveText.text = "Talk to your colleagues: " + objectiveProgress + " / " + talkToObjective;
-        if (objectiveProgress >= talkToObjective)
-            Debug.Log("You won!");
-
-        return;
-
     }
 
-    public void AddMiniGamesPlayedProgress()
+    public void AddMiniGamesPlayedProgress(string gameName)
     {
+        if (miniGames.Contains(gameName)) return;
+
+        miniGames.Add(gameName);
+
         miniGamesPlayed++;
         miniGamesPlayedText.text = "Minigames Played: " + miniGamesPlayed + " / " + miniGamesObjective;
-        Debug.Log(miniGamesPlayed + "/" + miniGamesObjective);
     }
 }

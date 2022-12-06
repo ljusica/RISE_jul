@@ -9,7 +9,7 @@ using TMPro;
 public class HumanBenchmark : MonoBehaviour
 {
     [Header("Variables")]
-    [SerializeField] bool gameStarted;
+    [SerializeField]  bool gameStarted;
     [SerializeField] float timeSinceGameStart;
     [SerializeField] float timeGreen;
 
@@ -54,7 +54,7 @@ public class HumanBenchmark : MonoBehaviour
     {
         if (!hasBeenPlayed)
         {
-            objectiveHandler.AddMiniGamesPlayedProgress();
+            objectiveHandler.AddMiniGamesPlayedProgress(this.name);
             hasBeenPlayed = true;
         }
 
@@ -105,7 +105,6 @@ public class HumanBenchmark : MonoBehaviour
     private void Game()
     {
         if (!gameStarted) return;
-
 
         if (timeSinceGameStart < timeTillGreen)
         {

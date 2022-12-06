@@ -33,9 +33,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Restart",
+                    "name": "Escape",
                     "type": "Button",
-                    "id": "3b0d86ff-fab2-4d1e-9aba-f866346decca",
+                    "id": "615d8c22-9990-460b-a388-a2879eee9910",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -188,12 +188,12 @@
                 },
                 {
                     "name": "",
-                    "id": "7603443b-c047-4479-8da7-c17eaa100ffc",
-                    "path": "<Keyboard>/r",
+                    "id": "e79ef5cb-1d9b-4b9a-b3ab-30d8147d492c",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Restart",
+                    "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
