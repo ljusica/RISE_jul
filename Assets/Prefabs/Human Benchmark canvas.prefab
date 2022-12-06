@@ -308,7 +308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStarted: 0
-  isGreen: 0
   timeSinceGameStart: 0
   timeGreen: 0
   startText: {fileID: 249230945069020544}

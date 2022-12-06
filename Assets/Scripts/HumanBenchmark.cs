@@ -12,6 +12,9 @@ public class HumanBenchmark : MonoBehaviour
     [SerializeField]  bool gameStarted;
     [SerializeField] float timeSinceGameStart;
     [SerializeField] float timeGreen;
+    [SerializeField] Image arduinoImage;
+    private int state = 1;
+    private float timeTillGreen;
 
     private Objectives objectiveHandler;
     private bool hasBeenPlayed = false;
@@ -25,16 +28,18 @@ public class HumanBenchmark : MonoBehaviour
     [SerializeField] AudioSource goodSound;
     [SerializeField] AudioSource badSound;
 
-    private int state = 1;
-    private float timeTillGreen;
-    private Image image;
+
+    [Header("Sprites")]
+    [SerializeField] Sprite greenSprite;
+    [SerializeField] Sprite blueSprite;
+    [SerializeField] Sprite redSprite;
+
 
     private void Start()
     {
         objectiveHandler = GameObject.FindGameObjectWithTag("Objective").GetComponent<Objectives>();
 
-        image = GetComponent<Image>();
-        image.color = Color.blue;
+        arduinoImage.sprite = greenSprite;
     }
 
     void Update()
@@ -65,7 +70,7 @@ public class HumanBenchmark : MonoBehaviour
                 stateText.gameObject.SetActive(true);
                 subText.gameObject.SetActive(true);
                 subText.text = "";
-                image.color = Color.red;
+                arduinoImage.sprite = redSprite;
                 timeSinceGameStart = 0;
                 timeTillGreen = Random.Range(3f, 4.5f);
                 gameStarted = true;
@@ -74,7 +79,7 @@ public class HumanBenchmark : MonoBehaviour
                 break;
             case 2:
                 gameStarted = false;
-                image.color = Color.blue;
+                arduinoImage.sprite = blueSprite;
                 timeSinceGameStart = 0;
                 stateText.text = "Too soon!";
                 subText.text = "Click to keep going";
@@ -108,14 +113,14 @@ public class HumanBenchmark : MonoBehaviour
 
         if (timeSinceGameStart < timeTillGreen)
         {
-            image.color = Color.red;
+            arduinoImage.sprite = redSprite;
             state = 2;
             stateText.text = "Wait for green";
         }
         else
         {
             timeGreen += Time.deltaTime;
-            image.color = Color.green;
+            arduinoImage.sprite = greenSprite;
             state = 3;
             stateText.text = "Click!";
         }
