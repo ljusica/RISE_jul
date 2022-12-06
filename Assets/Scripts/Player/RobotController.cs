@@ -55,7 +55,13 @@ public class RobotController : MonoBehaviour
         rigidBody.velocity += new Vector3(direction.x, 0, direction.z) * 0.2f;
         lookDirection = rigidBody.velocity;
 
-        transform.rotation = inputs == Vector3.zero ? transform.rotation : Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookDirection), Time.fixedDeltaTime * 5f);
+
+
+        if (inputs.z < 0) 
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(-lookDirection), Time.fixedDeltaTime * 12f);
+        else
+            transform.rotation = inputs == Vector3.zero ? transform.rotation : Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookDirection), Time.fixedDeltaTime * 6f);
+        
     }
 
     private void SaveDirectionInput(InputAction.CallbackContext callbackContext)
