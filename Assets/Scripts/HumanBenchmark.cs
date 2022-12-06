@@ -13,6 +13,7 @@ public class HumanBenchmark : MonoBehaviour
     [SerializeField] float timeSinceGameStart;
     [SerializeField] float timeGreen;
     [SerializeField] Image arduinoImage;
+    [SerializeField] Image SpaceButtonDownImage;
     private int state = 1;
     private float timeTillGreen;
 
@@ -23,6 +24,7 @@ public class HumanBenchmark : MonoBehaviour
     [SerializeField] TMP_Text startText;
     [SerializeField] TMP_Text stateText;
     [SerializeField] TMP_Text subText;
+    [SerializeField] TMP_Text[] objectiveTexts;
 
     [Header("Audio Clips")]
     [SerializeField] AudioSource goodSound;
@@ -33,6 +35,7 @@ public class HumanBenchmark : MonoBehaviour
     [SerializeField] Sprite greenSprite;
     [SerializeField] Sprite blueSprite;
     [SerializeField] Sprite redSprite;
+
 
 
     private void Start()
@@ -49,10 +52,20 @@ public class HumanBenchmark : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            SpaceButtonDownImage.gameObject.SetActive(true);
             Click();
         }
+        else if (Input.GetKeyUp(KeyCode.Space))
+            SpaceButtonDownImage.gameObject.SetActive(false);    
 
         Game();
+
+
+        foreach (var text in objectiveTexts)
+        {
+            text.gameObject.SetActive(!this.gameObject.activeInHierarchy);
+        }
+
     }
 
     public void Click()
