@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -8,15 +9,20 @@ public class CameraRetainStartPosition : MonoBehaviour
     Vector3 startPosition;
     Quaternion startRotation;
 
+    [SerializeField] CinemachineVirtualCamera roboBrain;
+
     void Awake()
     {
         startPosition =  transform.position;
         startRotation = transform.rotation;
+
+        roboBrain = GetComponent<CinemachineVirtualCamera>();
     }
 
-    private async void Start()
+    private void OnEnable()
     {
-        await Delay();
+        CinemachineFramingTransposer transposer = roboBrain.GetCinemachineComponent<CinemachineFramingTransposer>();
+        transposer.ForceCameraPosition(Vector3.zero, Quaternion.identity);
     }
 
     async Task Delay()

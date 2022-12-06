@@ -40,11 +40,6 @@ public class Objectives : MonoBehaviour
         npcNames.Add(name);
         objectiveProgress++;
         talkToObjectiveText.text = "Talk to your colleagues: " + objectiveProgress + " / " + talkToObjective;
-        if (objectiveProgress >= talkToObjective)
-            Debug.Log("You won!");
-
-        return;
-
     }
 
     public void AddMiniGamesPlayedProgress(string gameName)
@@ -55,6 +50,5 @@ public class Objectives : MonoBehaviour
 
         miniGamesPlayed++;
         miniGamesPlayedText.text = "Minigames Played: " + miniGamesPlayed + " / " + miniGamesObjective;
-        Debug.Log(miniGamesPlayed + "/" + miniGamesObjective);
     }
 }

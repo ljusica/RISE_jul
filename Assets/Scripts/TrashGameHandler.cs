@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static PlayerController;
-using static InputManager;
 using UnityEngine.InputSystem;
 using TMPro;
+using static PlayerController;
+using static InputManager;
 
 public class TrashGameHandler : MonoBehaviour
 {
