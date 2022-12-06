@@ -125,9 +125,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: description
-      value: I like to both make and play games, preferably while listening to SKA.
-        I'm also interested in Japanese culture and like everything from anime and
-        manga to their food culture.
+      value: I like to both make and play games. As for music I've been enjoying
+        ska-punk lately.
       objectReference: {fileID: 0}
     - target: {fileID: 6110410550418871237, guid: 3d15dc3a11f5c9b449fd4184f3c4d428, type: 3}
       propertyPath: dialogueBox
