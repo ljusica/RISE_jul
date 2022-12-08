@@ -105,6 +105,7 @@ public class TrashLine : MonoBehaviour
                     plasticCount++;
                 else if (missedTrash.transform.position.x == columns[4].x)
                     metalCount++;
+                trashMissed.Add(missedTrash);
             }
         }
         yield return new WaitForSeconds(gameSpeed);
