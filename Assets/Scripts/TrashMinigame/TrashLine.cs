@@ -165,7 +165,6 @@ public class TrashLine : MonoBehaviour
             );
         trashPlaced++;
         trashMissed.Add(trash);
-
     }
 
     private GameObject RemoveTrashFromList()
