@@ -21893,6 +21893,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameCanvas: {fileID: 2377343033805785089}
+  objectiveTexts:
+  - {fileID: 496653105}
+  - {fileID: 672328226}
 --- !u!135 &1329017100
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -61391,9 +61394,6 @@ MonoBehaviour:
   startText: {fileID: 607971872}
   stateText: {fileID: 446338838}
   subText: {fileID: 731665718}
-  objectiveTexts:
-  - {fileID: 496653105}
-  - {fileID: 672328226}
   goodSound: {fileID: 2377343033805785096}
   badSound: {fileID: 2377343033805785095}
   greenSprite: {fileID: 21300000, guid: ce24e54aa8b66134f841d049d8155fe4, type: 3}
@@ -86147,7 +86147,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255368237394944169}
-  m_LocalRotation: {x: 0.3016186, y: 0.5736311, z: -0.23931117, w: 0.7229825}
+  m_LocalRotation: {x: 0.30161858, y: 0.57363117, z: -0.2393112, w: 0.7229825}
   m_LocalPosition: {x: 13.470343, y: 7.673644, z: -10.823542}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -88561,7 +88561,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255368238043193359}
-  m_LocalRotation: {x: 0.3016186, y: 0.5736311, z: -0.23931117, w: 0.7229825}
+  m_LocalRotation: {x: 0.30161858, y: 0.57363117, z: -0.2393112, w: 0.7229825}
   m_LocalPosition: {x: 18.653, y: 7.304, z: -3.726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
