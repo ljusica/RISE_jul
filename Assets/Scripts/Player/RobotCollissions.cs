@@ -52,6 +52,9 @@ public class RobotCollissions : MonoBehaviour
         if(col.CompareTag("Winzone"))
         {
             StartCoroutine(nameof(SpawnFireworks));
+            GameDataManager.instance.playerScoreData.gameName = "Robot Racer";
+            GameDataManager.instance.playerScoreData.score = Mathf.Round(Time.time - gameHandler.startTime).ToString();
+            GameDataManager.instance.PostScore();
         }
     }
 

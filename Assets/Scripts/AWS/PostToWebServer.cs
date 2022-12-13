@@ -5,18 +5,21 @@ using UnityEngine.Networking;
 
 public class PostToWebServer : MonoBehaviour
 {
-    void Start()
+    public void PostScore()
     {
         StartCoroutine(Upload());
     }
 
     IEnumerator Upload()
     {
-        WWWForm form = new WWWForm();
-        form.AddField("userScores", "myData");
+        string json = JsonUtility.ToJson(GameDataManager.instance.playerScoreData);
+        print(json);
+        
 
-        using (UnityWebRequest www = UnityWebRequest.Post("https://62ffa44e23908b.lhr.life/list", form))
+        using (UnityWebRequest www = UnityWebRequest.Put("http://192.168.1.79:8080/create", json))
         {
+            www.SetRequestHeader("Content-Type", "application/json");
+
             yield return www.SendWebRequest();
 
             if (www.result != UnityWebRequest.Result.Success)

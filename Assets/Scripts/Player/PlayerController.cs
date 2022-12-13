@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rigidBody;
     private Vector3 movement, clampedVelocity;
     public float speed = 10;
-    public bool canMove;
+    public bool canMove = true;
     private float targetAngleY;
     private Vector3 camCompensatedMovement;
 
@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     {
         instance.inputControls.Actions.Interact.performed += InteractionEvent;
         rigidBody = GetComponent<Rigidbody>();
-        canMove = true;
     }
 
     void FixedUpdate()

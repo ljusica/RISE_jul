@@ -106,6 +106,9 @@ public class HumanBenchmark : MonoBehaviour
                 timeGreen = 0;
                 goodSound.Play();                
                 state = 1;
+                GameDataManager.instance.playerScoreData.gameName = "Human Benchmark";
+                GameDataManager.instance.playerScoreData.score = stateText.text;
+                GameDataManager.instance.PostScore();
                 break;
             default:
                 break;

@@ -16,6 +16,8 @@ public class RoboGameHandler : MonoBehaviour
 
     [SerializeField] GameObject[] cameras;
 
+    public float startTime;
+
     private PlayerController playerController;
     private RobotController robotController;
     private RobotCollissions robotCollissions;
@@ -60,6 +62,8 @@ public class RoboGameHandler : MonoBehaviour
         officeVirtualCamera.Priority = (CameraPriorityLevel.priorityLevel - 10);
         roboVirtualCamera.Priority = CameraPriorityLevel.priorityLevel;
         CameraPriorityLevel.priorityLevel++;
+
+        startTime = Time.time;
     }
 
     private void CameraCheck()

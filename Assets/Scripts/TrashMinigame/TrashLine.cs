@@ -37,6 +37,9 @@ public class TrashLine : MonoBehaviour
                     Destroy(trash);
                 }
                 trashHeight.Clear();
+                GameDataManager.instance.playerScoreData.gameName = "Trash Game";
+                GameDataManager.instance.playerScoreData.score = score.ToString();
+                GameDataManager.instance.PostScore();
             }
             if (movesMade == 2)
             {

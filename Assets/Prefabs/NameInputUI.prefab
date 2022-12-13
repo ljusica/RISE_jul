@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 4903257169638703841}
   - component: {fileID: 5279939942471292736}
   - component: {fileID: 6379254211232910547}
+  - component: {fileID: 5987129906400000771}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -816,7 +817,56 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5279939942471292736}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5987129906400000771}
+        m_TargetAssemblyTypeName: SubmitNameButton, Assembly-CSharp
+        m_MethodName: SubmitName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2850161582675370136}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SubmitNameButton, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5987129906400000771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4602079166844847660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499b271681c64e6499635809dfa9a426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameInputField: {fileID: 1331975111}
 --- !u!1 &8153562202223432492
 GameObject:
   m_ObjectHideFlags: 0
