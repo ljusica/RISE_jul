@@ -5,9 +5,8 @@ using static PlayerController;
 public class HumanBenchMarkHandler : MonoBehaviour
 {
     [SerializeField] GameObject gameCanvas;
-    private PlayerController playerController;
-
     [SerializeField] TMP_Text[] objectiveTexts;
+    private PlayerController playerController;
 
     private void Start()
     {
