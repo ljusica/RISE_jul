@@ -24,12 +24,11 @@ public class HumanBenchmark : MonoBehaviour
     [SerializeField] TMP_Text startText;
     [SerializeField] TMP_Text stateText;
     [SerializeField] TMP_Text subText;
-    [SerializeField] TMP_Text[] objectiveTexts;
+
 
     [Header("Audio Clips")]
     [SerializeField] AudioSource goodSound;
     [SerializeField] AudioSource badSound;
-
 
     [Header("Sprites")]
     [SerializeField] Sprite greenSprite;
@@ -59,12 +58,6 @@ public class HumanBenchmark : MonoBehaviour
             SpaceButtonDownImage.gameObject.SetActive(false);    
 
         Game();
-
-
-        foreach (var text in objectiveTexts)
-        {
-            text.gameObject.SetActive(!this.gameObject.activeInHierarchy);
-        }
 
     }
 
