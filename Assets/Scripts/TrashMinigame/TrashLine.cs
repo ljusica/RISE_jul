@@ -11,16 +11,16 @@ public class TrashLine : MonoBehaviour
     public Camera trashCamera;
     public int score;
 
-    float width, height;
-    Vector3[] columns = new Vector3[7];
-    Vector3[] rows = new Vector3[8];
-    List<GameObject> trashPieces = new List<GameObject>();
-    List<int> trashHeight = new List<int>();
-    List<GameObject> trashMissed = new List<GameObject>();
-    private float positionIndex = 3, gameSpeed = 1;
-    private int movesMade, plasticCount, metalCount, cardboardCount, trashPlaced;
-    private bool canMove = true;
     private bool isGameOver;
+    private bool canMove = true;
+    private float width, height;
+    private Vector3[] rows = new Vector3[8];
+    private Vector3[] columns = new Vector3[7];
+    private float positionIndex = 3, gameSpeed = 1;
+    private List<int> trashHeight = new List<int>();
+    private List<GameObject> trashPieces = new List<GameObject>();
+    private List<GameObject> trashMissed = new List<GameObject>();
+    private int movesMade, plasticCount, metalCount, cardboardCount, trashPlaced;
 
      private void Update()
     {
