@@ -7,6 +7,6 @@ using UnityEngine;
 public class PlayerScoreData
 {
     public string userName;
-    public string score;
     public string gameName;
+    public string score;
 }
